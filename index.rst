@@ -51,6 +51,7 @@ Contents
 .. toctree::
    :maxdepth: 3
 
+   getting-started/index
    contributing/index
    LICENSE
 
