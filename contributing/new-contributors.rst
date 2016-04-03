@@ -80,6 +80,13 @@ It can be difficult sometimes to find a place to start, so here are some suggest
    be suitable for someone new to Xapian to pick up. We've tried to
    have a range of things to work on across different parts of Xapian.
 
+.. note::
+
+   No change is too small to consider! Some people's first
+   contributions to an open source project are fixing a single stray
+   letter in documentation, or adding a line break where one is
+   needed.
+
 .. _documentation: https://trac.xapian.org/wiki/MissingDocumentation
 .. _"bite-sized" projects: https://trac.xapian.org/wiki/ProjectIdeas#BiteSize
  
