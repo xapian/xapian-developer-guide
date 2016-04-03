@@ -27,4 +27,5 @@ to get more deeply involved in writing code for Xapian.
 
    licensing
    new-contributors
+   workflow
    contributing-changes
