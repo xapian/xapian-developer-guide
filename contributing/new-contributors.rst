@@ -49,10 +49,12 @@ website and the latest version in git.
 Get familiar with the code
 --------------------------
 
-If you're going to be writing code, it's a good idea to read some of Xapian's existing sources, particularly in the main library (``xapian-core``). When
-you come to write your own, you'll want to follow the style of how the
-current code works, both in terms of layout (where spaces go and so
-on) and how we use various C++ language features.
+If you're going to be writing code, it's a good idea to read some of
+Xapian's existing sources, particularly in the main library
+(``xapian-core``). When you come to write your own, you'll want to
+follow the style of how the current code works, both in terms of
+layout (where spaces go and so on) and how we use various C++ language
+features.
 
 .. note::
 
@@ -71,7 +73,8 @@ It can be difficult sometimes to find a place to start, so here are some suggest
    work. It's much easier to get feedback on a small change to start
    off with.
 
-   If documentation is your thing, then you might like to take a look at our list of missing documentation_.
+   If documentation is your thing, then you might like to take a look
+   at our list of missing documentation_.
  
    On the features side, our`"bite-sized" projects`_ are intended to
    be suitable for someone new to Xapian to pick up. We've tried to
