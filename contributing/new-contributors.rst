@@ -44,7 +44,7 @@ website and the latest version in git.
 .. _user guide: https://getting-started-with-xapian.readthedocs.org/
 .. _grab the source: https://github.com/xapian/xapian-docsprint
 .. _automatically generated API documentation:
-   http://xapian.org/docs/apidoc/html/annotated.html
+   https://xapian.org/docs/apidoc/html/annotated.html
 
 Get familiar with the code
 --------------------------

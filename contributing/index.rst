@@ -3,7 +3,7 @@ Contributing to Xapian
 
 Xapian is an open source project, depending on a community of volunteers. There are lots of ways of contributing to Xapian:
 
- * Join our `mailing lists <http://xapian.org/lists>`_ or IRC channel (#xapian on Freenode) and help people out.
+ * Join our `mailing lists <https://xapian.org/lists>`_ or IRC channel (#xapian on Freenode) and help people out.
 
  * Talk or write about Xapian. By explaining how you've used Xapian you not only help spread the word, but also might learn more about Xapian itself.
 

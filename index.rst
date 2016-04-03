@@ -30,7 +30,7 @@ Getting in touch
 The Xapian community typically works "in the open", via mailing lists and an
 IRC channel:
 
- * Our `mailing lists <http://xapian.org/lists>`_ are open for anyone to
+ * Our `mailing lists <https://xapian.org/lists>`_ are open for anyone to
    join, although (because we don't want to relay spam to everyone) if you
    aren't subscribed to the list someone will have to manually approve your
    message. Please be patient and don't resend a message just because it
