@@ -143,22 +143,22 @@ them do whatever work they need to do. There's a
 may help you think about structuring your changes into a set of commits
 that are easy for others to read.
 
- * Only make *one change* per commit, and make the *whole change* in
-   that commit -- you don't want to end up with essential bits of code
-   in a different commit.
+* Only make *one change* per commit, and make the *whole change* in
+  that commit -- you don't want to end up with essential bits of code
+  in a different commit.
 
-   Many people struggle with this at first, and it can be difficult to
-   get into the habit of thinking in terms of the distinct changes to
-   the system rather than in terms of how you did the work. :ref:`A
-   plan <Write a plan>` here can help structure your commits once
-   you've finished working.
+  Many people struggle with this at first, and it can be difficult to
+  get into the habit of thinking in terms of the distinct changes to
+  the system rather than in terms of how you did the work. :ref:`A
+  plan <Write a plan>` here can help structure your commits once
+  you've finished working.
 
-   One of the reasons we suggest using ``git add -p`` is that it
-   enables you to review every single change that goes into a commit,
-   which can help you put only the right things into it.
+  One of the reasons we suggest using ``git add -p`` is that it
+  enables you to review every single change that goes into a commit,
+  which can help you put only the right things into it.
 
- * Avoid committing code that has been commented out. If we need it
-   again, it's in the git history.
+* Avoid committing code that has been commented out. If we need it
+  again, it's in the git history.
 
 Good commit messages
 ~~~~~~~~~~~~~~~~~~~~
@@ -169,22 +169,22 @@ for when someone needs to understand how and why a particular change
 was made, months or years in the future -- when that someone might be
 you!
 
- * Start with a short (50 characters) summary line.
+* Start with a short (50 characters) summary line.
 
-   git (and github) are designed to work better this way. The summary
-   should be in the imperative ("Fix bug on OS X" rather than "Fixed
-   bug on OS X"). This matches git's automatic messages around
-   merges, reverts and so on.
+  git (and github) are designed to work better this way. The summary
+  should be in the imperative ("Fix bug on OS X" rather than "Fixed
+  bug on OS X"). This matches git's automatic messages around
+  merges, reverts and so on.
 
- * Follow that with more detail as needed.
+* Follow that with more detail as needed.
 
- * Describe the effect, not the code. The important thing is for
-   people to be able to read the commit message and understand what
-   you were trying to achieve when you made those changes. That way,
-   if someone needs to work on that part of the code in future, they
-   can understand the purpose of it, and not accidentally remove some
-   useful functionality. (Tests help here, but the commit message is
-   very important.)
+* Describe the effect, not the code. The important thing is for
+  people to be able to read the commit message and understand what
+  you were trying to achieve when you made those changes. That way,
+  if someone needs to work on that part of the code in future, they
+  can understand the purpose of it, and not accidentally remove some
+  useful functionality. (Tests help here, but the commit message is
+  very important.)
 
 There are a few articles around on writing good commit messages;
 Thoughtbot's `"5 Useful Tips For A Better Commit Message"`_ has some
