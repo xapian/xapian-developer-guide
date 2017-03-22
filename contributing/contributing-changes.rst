@@ -140,10 +140,23 @@ documentation and so on :ref:`as discussed earlier<patch-guidelines>`.
    feedback on any changes, you may want to put the code and tests up
    while still working on documentation.
 
-   You can add further changes to pull requests by creating
-   additional commits locally and pushing the branch up to Github.
-   Once everything's reviewed you may want to `squash your commits
+   You should add further changes to pull requests by creating
+   additional commits locally, typically by using ``git commit --fixup``,
+   and then pushing the branch up to Github. Only once everything's
+   been approved should you `squash your commits
    together`_ to keep the history clean.
+
+   .. note::
+
+      Once you've opened a pull request, you shouldn't have to close
+      it until it's merged (in which case we'll generally close it for
+      you). Even if you need to redo some work, you can either add
+      fixup commits or (with agreement from whoever is reviewing the
+      PR) unwind your work and create completely new commits, force
+      pushing to replace the previous commits in the pull request.
+
+      It makes it much harder to review if you close a pull request in
+      the middle of a review only to open another with similar code.
 
 .. _Github pull requests: https://help.github.com/categories/collaborating-on-projects-using-pull-requests/
 .. _squash your commits together: https://robots.thoughtbot.com/git-interactive-rebase-squash-amend-rewriting-history
