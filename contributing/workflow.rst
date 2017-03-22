@@ -79,7 +79,7 @@ documentation and tests in advance.
 About the only time you don't need to write a plan is when you're
 making a small change to some documentation, correcting a spelling
 mistake or making something clearer.
-    
+
 Make your changes!
 ------------------
 
@@ -112,9 +112,9 @@ To stage changes for your next commit::
 
 The ``-p`` tells git that you want it to find all the changes, then
 one by one ask you if you want each staged. Just type ``y`` to stage a
-change (it calls them "hunks"), or``n`` to skip it this time round. If
-the file is completely new, you can run ``git add <path>`` to stage
-the whole file. (There are lots of other options available in ``git
+change (it calls them "hunks"), or ``n`` to skip it this time
+round. If the file is completely new, you can run ``git add <path>`` to
+stage the whole file. (There are lots of other options available in ``git
 add -p``; if you type ``?`` then it will explain what they all do.)
 
 Then to make a commit::
