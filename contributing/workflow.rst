@@ -138,7 +138,10 @@ Structuring your changes into commits can take a bit of getting used
 to, but makes it a lot easier for other people to review, both before
 we merge into Xapian and in the future when someone -- which might be
 you! -- needs to understand why a change was made in the past, to help
-them do whatever work they need to do.
+them do whatever work they need to do. There's a
+`good article by Anna Shipman <How to raise a good pull request>`_ that
+may help you think about structuring your changes into a set of commits
+that are easy for others to read.
 
  * Only make *one change* per commit, and make the *whole change* in
    that commit -- you don't want to end up with essential bits of code
@@ -203,6 +206,8 @@ online, such as `Pro Git`_.
    https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
 .. _Goal-Oriented Git: https://gumroad.com/l/gWds
 .. _Pro Git: https://git-scm.com/book/en/v2
+.. _How to raise a good pull request:
+   http://www.annashipman.co.uk/jfdi/good-pull-requests.html
 
 Contribute your changes
 -----------------------
