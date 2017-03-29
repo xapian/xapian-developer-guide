@@ -79,7 +79,7 @@ documentation and tests in advance.
 About the only time you don't need to write a plan is when you're
 making a small change to some documentation, correcting a spelling
 mistake or making something clearer.
-    
+
 Make your changes!
 ------------------
 
@@ -112,9 +112,9 @@ To stage changes for your next commit::
 
 The ``-p`` tells git that you want it to find all the changes, then
 one by one ask you if you want each staged. Just type ``y`` to stage a
-change (it calls them "hunks"), or``n`` to skip it this time round. If
-the file is completely new, you can run ``git add <path>`` to stage
-the whole file. (There are lots of other options available in ``git
+change (it calls them "hunks"), or ``n`` to skip it this time
+round. If the file is completely new, you can run ``git add <path>`` to
+stage the whole file. (There are lots of other options available in ``git
 add -p``; if you type ``?`` then it will explain what they all do.)
 
 Then to make a commit::
@@ -138,24 +138,27 @@ Structuring your changes into commits can take a bit of getting used
 to, but makes it a lot easier for other people to review, both before
 we merge into Xapian and in the future when someone -- which might be
 you! -- needs to understand why a change was made in the past, to help
-them do whatever work they need to do.
+them do whatever work they need to do. There's a
+`good article by Anna Shipman <How to raise a good pull request>`_ that
+may help you think about structuring your changes into a set of commits
+that are easy for others to read.
 
- * Only make *one change* per commit, and make the *whole change* in
-   that commit -- you don't want to end up with essential bits of code
-   in a different commit.
+* Only make *one change* per commit, and make the *whole change* in
+  that commit -- you don't want to end up with essential bits of code
+  in a different commit.
 
-   Many people struggle with this at first, and it can be difficult to
-   get into the habit of thinking in terms of the distinct changes to
-   the system rather than in terms of how you did the work. :ref:`A
-   plan <Write a plan>` here can help structure your commits once
-   you've finished working.
+  Many people struggle with this at first, and it can be difficult to
+  get into the habit of thinking in terms of the distinct changes to
+  the system rather than in terms of how you did the work. :ref:`A
+  plan <Write a plan>` here can help structure your commits once
+  you've finished working.
 
-   One of the reasons we suggest using ``git add -p`` is that it
-   enables you to review every single change that goes into a commit,
-   which can help you put only the right things into it.
+  One of the reasons we suggest using ``git add -p`` is that it
+  enables you to review every single change that goes into a commit,
+  which can help you put only the right things into it.
 
- * Avoid committing code that has been commented out. If we need it
-   again, it's in the git history.
+* Avoid committing code that has been commented out. If we need it
+  again, it's in the git history.
 
 Good commit messages
 ~~~~~~~~~~~~~~~~~~~~
@@ -166,22 +169,22 @@ for when someone needs to understand how and why a particular change
 was made, months or years in the future -- when that someone might be
 you!
 
- * Start with a short (50 characters) summary line.
+* Start with a short (50 characters) summary line.
 
-   git (and github) are designed to work better this way. The summary
-   should be in the imperative ("Fix bug on OS X" rather than "Fixed
-   bug on OS X"). This matches git's automatic messages around
-   merges, reverts and so on.
+  git (and github) are designed to work better this way. The summary
+  should be in the imperative ("Fix bug on OS X" rather than "Fixed
+  bug on OS X"). This matches git's automatic messages around
+  merges, reverts and so on.
 
- * Follow that with more detail as needed.
+* Follow that with more detail as needed.
 
- * Describe the effect, not the code. The important thing is for
-   people to be able to read the commit message and understand what
-   you were trying to achieve when you made those changes. That way,
-   if someone needs to work on that part of the code in future, they
-   can understand the purpose of it, and not accidentally remove some
-   useful functionality. (Tests help here, but the commit message is
-   very important.)
+* Describe the effect, not the code. The important thing is for
+  people to be able to read the commit message and understand what
+  you were trying to achieve when you made those changes. That way,
+  if someone needs to work on that part of the code in future, they
+  can understand the purpose of it, and not accidentally remove some
+  useful functionality. (Tests help here, but the commit message is
+  very important.)
 
 There are a few articles around on writing good commit messages;
 Thoughtbot's `"5 Useful Tips For A Better Commit Message"`_ has some
@@ -203,6 +206,8 @@ online, such as `Pro Git`_.
    https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
 .. _Goal-Oriented Git: https://gumroad.com/l/gWds
 .. _Pro Git: https://git-scm.com/book/en/v2
+.. _How to raise a good pull request:
+   http://www.annashipman.co.uk/jfdi/good-pull-requests.html
 
 Contribute your changes
 -----------------------
