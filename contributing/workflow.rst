@@ -139,7 +139,7 @@ to, but makes it a lot easier for other people to review, both before
 we merge into Xapian and in the future when someone -- which might be
 you! -- needs to understand why a change was made in the past, to help
 them do whatever work they need to do. There's a
-`good article by Anna Shipman <How to raise a good pull request>`_ that
+`good article by Anna Shipman <How to raise a good pull request_>`_ that
 may help you think about structuring your changes into a set of commits
 that are easy for others to read.
 
