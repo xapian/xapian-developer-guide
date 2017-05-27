@@ -176,7 +176,8 @@ you!
   bug on OS X"). This matches git's automatic messages around
   merges, reverts and so on.
 
-* Follow that with more detail as needed.
+* Follow that with more detail as needed, wrapping long lines at
+  72 characters (one exception is that long URLs are best not wrapped).
 
 * Describe the effect, not the code. The important thing is for
   people to be able to read the commit message and understand what
