@@ -76,7 +76,7 @@ It can be difficult sometimes to find a place to start, so here are some suggest
    If documentation is your thing, then you might like to take a look
    at our list of missing documentation_.
  
-   On the features side, our`"bite-sized" projects`_ are intended to
+   On the features side, our `bite-sized projects`_ are intended to
    be suitable for someone new to Xapian to pick up. We've tried to
    have a range of things to work on across different parts of Xapian.
 
@@ -88,7 +88,7 @@ It can be difficult sometimes to find a place to start, so here are some suggest
    needed.
 
 .. _documentation: https://trac.xapian.org/wiki/MissingDocumentation
-.. _"bite-sized" projects: https://trac.xapian.org/wiki/ProjectIdeas#BiteSize
+.. _bite-sized projects: https://trac.xapian.org/wiki/ProjectIdeas#BiteSize
  
  * Pick something you care about, or which you already have some
    knowledge of.
