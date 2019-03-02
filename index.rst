@@ -13,11 +13,12 @@ at our `Xapian user manual`_.
 
 .. note::
 
-   This is very early days for this guide, so please let us know any issues
-   you spot or how we can improve it in any way. There's a lot of additional
-   information about developing for Xapian in the `HACKING file in xapian-core`_
-   which we hope to move here in future, and in the meantime that's a good place to
-   look for information on coding style, writing and running tests, and so on.
+   This is very early days for this guide, so please let us know any
+   issues you spot or how we can improve it in any way. There's a lot
+   of additional information about developing for Xapian in the
+   `HACKING file in xapian-core`_ which we hope to move here in
+   future, and in the meantime that's a good place to look for
+   information on coding style, writing and running tests, and so on.
 
 .. _HACKING file in xapian-core:
    https://github.com/xapian/xapian/blob/master/xapian-core/HACKING
