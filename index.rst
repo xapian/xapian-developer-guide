@@ -22,6 +22,22 @@ at our `Xapian user manual`_.
 .. _HACKING file in xapian-core:
    https://github.com/xapian/xapian/blob/master/xapian-core/HACKING
 
+.. todo::
+
+   Nice introduction, explain why people should bother reading this
+   and emphasise the different types of contribution and that we value
+   them all. Point out how to manage security issues.
+
+.. todo::
+
+   Set expectations. Cross-platform, clean build (``-Wall -Werror``) on
+   a range of compilers. Clang is different to GCC.
+
+   Documented, tested code.
+
+   We encourage contributors to get involved in our community. We can
+   do more together!
+
 .. _contact:
 
 Getting in touch
@@ -57,9 +73,22 @@ Contents
 
 .. some other pieces from HACKING that could live here
 
-   getting-started/index [ getting source, predeps, Windows/VM &c ]
-   build-system/index [ configure options, tips for aiding development ]
-   tests/index
+   note that from 'Building from git' through to the section on
+   Vagrant is now in this repo, albeit some pieces unlinked and
+   unedited. There's a section on autotools which, given we
+   bootstrap autotools these days, seems of peripheral interest
+   at best.
+
+   The section on dependencies is deliberately trimmed to just
+   install everything and not explain what's going on. So we
+   might want to include the details somewhere.
+
+   There needs to be a section about OS X and bindings, somewhere.
+
+   build-system/index [ configure options, tips for aiding development, vagrant ]
+   tests/index [ eatmydata, debugging, valgrind, make targets, running individual tests, lldb/gdb, gprof/purify/insure/lcov, data -> db indexing (tests/testdata & code in tests/harness/)), where the dbs live (eg tests/.glass) ]
    writing-code/index [C++ features, naming conventions, code formatting, API structure, portability]
    releases/index [how to make a release, Debian packages]
    deprecation
+
+.. documentation is worth having some conversation about

@@ -7,6 +7,10 @@ want to ask a question, please :ref:`get in touch <contact>`.  This
 may look a bit daunting the first time, but we're here to help, and a
 lot of the details will become natural over time.
 
+.. todo:: Should be easier to find this section.
+
+.. todo:: Point to some git & github advice.
+
 Checking out and building Xapian
 --------------------------------
               
