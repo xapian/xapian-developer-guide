@@ -40,14 +40,18 @@ these are called branches_.
 
 Before you create your branch, you will generally want to make sure
 your local copy of the code is up to date with the central
-repository. Generally you can this as follows::
+repository. Generally you can this as follows:
 
-    $ git checkout master
-    $ git pull origin/master
+  .. code-block:: bash
 
-You can check create your new branch::
+     $ git checkout master
+     $ git pull origin/master
 
-    $ git checkout -b feature-x
+You can check create your new branch:
+
+  .. code-block:: bash
+
+     $ git checkout -b feature-x
 
 The branch name doesn't really matter, but you'll probably find it
 easiest to name it something related to the work that you're doing.
@@ -106,9 +110,11 @@ once, which means you can keep small notes or parts of future work
 lying around while you're creating your commits, without them creeping
 into your commits and confusing matters.
 
-To stage changes for your next commit::
+To stage changes for your next commit:
 
-    $ git add -p
+  .. code-block:: bash
+
+     $ git add -p
 
 The ``-p`` tells git that you want it to find all the changes, then
 one by one ask you if you want each staged. Just type ``y`` to stage a
@@ -117,9 +123,11 @@ round. If the file is completely new, you can run ``git add <path>`` to
 stage the whole file. (There are lots of other options available in ``git
 add -p``; if you type ``?`` then it will explain what they all do.)
 
-Then to make a commit::
+Then to make a commit:
 
-   $ git commit -v
+  .. code-block:: bash
+
+     $ git commit -v
 
 git will open your editor for you to write a commit message. The
 ``-v`` means that your changes will be shown at the bottom of the
