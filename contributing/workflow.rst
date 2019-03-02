@@ -58,6 +58,8 @@ easiest to name it something related to the work that you're doing.
 
 .. _branches: https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
 
+.. _Write a plan:
+
 Write a plan
 ------------
 
