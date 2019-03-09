@@ -23,21 +23,29 @@ at our `Xapian user manual`_.
 .. _HACKING file in xapian-core:
    https://github.com/xapian/xapian/blob/master/xapian-core/HACKING
 
+Since Xapian is an open source project, it is entirely dependent on
+contributions -- many of them from people like you! These
+contributions come in many forms, from spotting when some
+documentation isn't clear and maybe improving it, through fixing bugs
+up to designing and implementing completely new features. We need all
+types of contribution for Xapian to continue to evolve and serve its
+users.
+
+This guide is intended to:
+
+ * help you understand how to make and contribute changes to Xapian
+
+ * lay out some of our "rules of the road", which are there to make it
+   easier for everyone to collaborate on Xapian
+
+We recommend you at least skim through all of this guide, so you know
+what information is available to you. However, if you absolutely must
+jump in head first, you should at least read our :ref:`advice for new
+contributors<advice for new contributors>`.
+
 .. todo::
 
-   Nice introduction, explain why people should bother reading this
-   and emphasise the different types of contribution and that we value
-   them all. Point out how to manage security issues.
-
-.. todo::
-
-   Set expectations. Cross-platform, clean build (``-Wall -Werror``) on
-   a range of compilers. Clang is different to GCC.
-
-   Documented, tested code.
-
-   We encourage contributors to get involved in our community. We can
-   do more together!
+   Talk about how to manage security issues.
 
 .. _contact:
 
