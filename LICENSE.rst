@@ -6,6 +6,7 @@ This license applies to all documentation and example code in this book.
 | Copyright (c) 2001, 2016 James Aylett
 | Copyright (c) 2006, 2008, 2010, 2012, 2014 Olly Betts
 | Copyright (c) 2007, 2009 Richard Boulton
+| Copyright (c) 2012 Dan Colish
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),
