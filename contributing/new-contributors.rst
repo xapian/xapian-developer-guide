@@ -65,13 +65,8 @@ If you're going to be writing code, it's a good idea to read some of
 Xapian's existing sources, particularly in the main library
 (``xapian-core``). When you come to write your own, you'll want to
 follow the style of how the current code works, both in terms of
-layout (where spaces go and so on) and how we use various C++ language
-features.
-
-.. note::
-
-   There is :ref:`further information on this <other-info>` that hasn't yet
-   been added to this guide.
+layout (where spaces go and so on) and :ref:`how we use various C++
+language features<c++ conventions>`.
 
 Picking something to start with
 -------------------------------
