@@ -4,7 +4,7 @@ License
 This license applies to all documentation and example code in this book.
 
 | Copyright (c) 2001, 2016 James Aylett
-| Copyright (c) 2006, 2008, 2010, 2012, 2014 Olly Betts
+| Copyright (c) 2006--2019 Olly Betts
 | Copyright (c) 2007, 2009 Richard Boulton
 | Copyright (c) 2012 Dan Colish
 

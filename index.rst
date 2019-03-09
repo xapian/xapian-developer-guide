@@ -18,7 +18,9 @@ at our `Xapian user manual`_.
    of additional information about developing for Xapian in the
    `HACKING file in xapian-core`_ which we hope to move here in
    future, and in the meantime that's a good place to look for
-   information on coding style, writing and running tests, and so on.
+   information on writing and running tests, debugging, and options
+   available when configuring the source tree. It also contains our
+   documentation for making a Xapian release.
 
 .. _HACKING file in xapian-core:
    https://github.com/xapian/xapian/blob/master/xapian-core/HACKING
@@ -77,16 +79,15 @@ Contents
    :maxdepth: 3
 
    getting-started/index
+   conventions/index
    contributing/index
    LICENSE
 
 .. some other pieces from HACKING that could live here
 
-   note that from 'Building from git' through to the section on
-   Vagrant is now in this repo, albeit some pieces unlinked and
-   unedited. There's a section on autotools which, given we
-   bootstrap autotools these days, seems of peripheral interest
-   at best.
+   note that the central section (from 'Building from git' through to
+   tips for aiding development) is now in here, although not always
+   tidied up or in the best place.
 
    The section on dependencies is deliberately trimmed to just
    install everything and not explain what's going on. So we
@@ -94,10 +95,8 @@ Contents
 
    There needs to be a section about OS X and bindings, somewhere.
 
-   build-system/index [ configure options, tips for aiding development, vagrant ]
+   build-system/index [ configure options ]
    tests/index [ eatmydata, debugging, valgrind, make targets, running individual tests, lldb/gdb, gprof/purify/insure/lcov, data -> db indexing (tests/testdata & code in tests/harness/)), where the dbs live (eg tests/.glass) ]
-   writing-code/index [C++ features, naming conventions, code formatting, API structure, portability]
    releases/index [how to make a release, Debian packages]
-   deprecation
 
 .. documentation is worth having some conversation about
