@@ -150,6 +150,8 @@ they'll leave comments on the trac ticket (trac will generally
 email you if you're marked as the owner, or you can explicitly
 add yourself to the "cc" list for a ticket).
 
+.. _pull requests:
+
 Open a Pull Request on github
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
