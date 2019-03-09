@@ -13,7 +13,7 @@ Checking out and building Xapian
 --------------------------------
               
 A good way to start learning about Xapian is to `check out the code
-<https://xapian.org/bleeding>`_. and get it to build. It's better to
+<https://xapian.org/bleeding>`_, and get it to build. It's better to
 use the latest code from the repository rather than a release, as
 that's what we want the projects to be based on.
 
