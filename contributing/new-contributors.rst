@@ -1,3 +1,5 @@
+.. _advice for new contributors:
+
 Advice for new contributors
 ===========================
 
