@@ -81,6 +81,7 @@ Contents
    getting-started/index
    conventions/index
    contributing/index
+   mentors/index
    LICENSE
 
 .. some other pieces from HACKING that could live here
