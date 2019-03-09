@@ -9,8 +9,6 @@ want to ask a question, please :ref:`get in touch <contact>`.  This
 may look a bit daunting the first time, but we're here to help, and a
 lot of the details will become natural over time.
 
-.. todo:: Point to some git & github advice.
-
 Checking out and building Xapian
 --------------------------------
               
@@ -30,6 +28,16 @@ It can take a while to get the code if your network connection is
 slow, and it may take a while to build and run the testsuite if your
 computer is slow - while you are waiting, you might want to make a
 start on the next section.
+
+If you haven't used git before, or want a refresher on "branches",
+"remotes" and so forth, then `this article by James Aylett`_ was
+written for our students a number of years ago, and may be
+helpful. There are also a number of free books and resources online,
+such as `Pro Git`_.
+
+.. _this article by James Aylett: https://tartarus.org/james/diary/2016/06/05/git-remotes
+
+.. _Pro Git: https://git-scm.com/book/en/v2
 
 Learn about Xapian's API
 ------------------------
