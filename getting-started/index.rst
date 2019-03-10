@@ -49,8 +49,8 @@ all the necessary tools and libraries:
      $ apt-get install build-essential m4 perl python zlib1g-dev uuid-dev \
        wget bison tcl libpcre3-dev libmagic-dev valgrind ccache eatmydata \
        doxygen graphviz help2man python-docutils pngcrush python-sphinx \
-       python3-sphinx mono-devel openjdk-6-jdk lua5.2 liblua5.2-dev \
-       php5-dev php5-cli python-dev python3-dev ruby-dev tcl-dev
+       python3-sphinx mono-devel openjdk-8-jdk lua5.2 liblua5.2-dev \
+       php-dev php-cli python-dev python3-dev ruby-dev tcl-dev
 
 OS X
 ~~~~
@@ -66,7 +66,8 @@ using:
 
   .. code-block:: bash
 
-     $ brew install libmagic pcre php56 python python3 lua ruby mono \
+     $ brew install libmagic pcre \
+       lua mono perl php python python3 ruby tcl-tk \
        doxygen help2man graphviz pngcrush
      # and some python-specific documentation tools
      $ pip install sphinx docutils
