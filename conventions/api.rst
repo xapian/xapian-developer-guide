@@ -42,11 +42,11 @@ of the prefix form as described by Joe Buck on the gcc mailing list:
    the postfix operator without using the result should give code
    equivalent to using the prefix operator.
 
-   Now, for [GCC 3.4], you'll find that the dead uses of tmp are only
-   completely optimized away if tmp has only one data member that can
-   fit in a register.  [GCC 4.0 will do] better, and you should find
-   that this style comes very close to eliminating any penalty from
-   "incorrect" use of the postfix form.
+   [With modern compilers], you'll find that the dead uses of tmp are
+   only completely optimized away if tmp has only one data member that
+   can fit in a register.  [Recent GCC does] better, and you should
+   find that this style comes very close to eliminating any penalty
+   from "incorrect" use of the postfix form.
 
 Xapian's PostingIterator, TermIterator, PositionIterator, and ValueIterator all
 have only one data member which fits in a register.
