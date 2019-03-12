@@ -22,9 +22,25 @@ working from a git clone, all warnings will actually become
 errors. You should fix the problems rather than change the
 compilation settings to ignore these warnings.
 
-Please set the width of a tab character in your editor to 8 spaces,
-and use Unix line endings (i.e. LF, not CR+LF).  Failing to do so will
-make it much harder for us to merge in your changes.
+Please configure your editor to:
+
+* indent each block of code 4 columns from the containing block
+
+  .. code-block: c++
+
+     {
+         // Four columns further
+         {
+             // And four more
+         }
+     }
+
+* display the tab character by advancing to the next column that is a
+  multiple of 8
+* "tab fill" indents: all indents should start with as many tab
+  characters as possible followed by as few spaces as possible
+* use Unix line endings (so each line ends with just LF, rather than
+  CR+LF)
 
 We don't currently have a formal coding standards document, so
 you should try to follow the style of the existing
