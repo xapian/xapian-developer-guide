@@ -192,8 +192,7 @@ Efficient use of ``std::string``
 
 * When passing an empty string to a method expecting ``const
   std::string &`` prefer ``std::string()`` to ``""`` or
-  ``std::string("")`` as the first form is more likely to directly use
-  a special "empty string representation" (it does with GCC at least).
+  ``std::string("")`` (it is more efficient with some compilers).
 
 * To make a string object empty, ``s.resize(0)`` (if you want to keep
   the current reserved space) or ``s = string()`` (if you don't) seem
@@ -277,7 +276,7 @@ like this::
 
       try {
 	  foo();
-      } catch (const ErrorClass &e) {
+      } catch (const ErrorClass& e) {
 	  bar(e);
       }
 
@@ -292,18 +291,10 @@ A const reference is preferable to a non-const reference as it stops
 the object being inadvertently modified.  In the rare cases when you
 want to modify the caught object, a non-const reference is OK.
 
-In hindsight, throwing exceptions in the library seems to have been a
-poor design decision.  GCC on Solaris can't cope with exceptions in
-shared libraries (though it appears this may have been fixed in more
-recent versions), and we've also had test failures on other platforms
-which only occur with shared libraries - possibly with a similar
-cause.  Exceptions can also be a pain to handle elegantly in the
-bindings.  We intend to investigate modifying the library to return
-error codes internally, and then offering the user the choice of
-exception throwing or error code returning API methods (with the
-exception being thrown by an inlined wrapper in the externally visible
-header files).  With this in mind, please don't complicate the
-internal handling of exceptions.
+Exceptions should be avoided except for truly exceptional situations,
+since throwing and handling them has a significant cost. It also
+generally makes the API easier to understand, and client code easier
+to read.
 
 
 Include ordering for source files
