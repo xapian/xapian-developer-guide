@@ -32,7 +32,7 @@ copy of everything first:
      $ cd xapian
 
 This will 'clone' a complete copy of the Xapian source code, including
-not only the core library but also the variable language bindings (for
+not only the core library but also the various language bindings (for
 use from Python, Lua, Ruby and so on) and the self-contained web
 search system 'Omega'. It also contains all the tests for those
 various components.
