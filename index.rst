@@ -80,6 +80,7 @@ Contents
 
    getting-started/index
    conventions/index
+   documentation/index
    contributing/index
    mentors/index
    LICENSE
@@ -99,5 +100,3 @@ Contents
    build-system/index [ configure options ]
    tests/index [ eatmydata, debugging, valgrind, make targets, running individual tests, lldb/gdb, gprof/purify/insure/lcov, data -> db indexing (tests/testdata & code in tests/harness/)), where the dbs live (eg tests/.glass) ]
    releases/index [how to make a release, Debian packages]
-
-.. documentation is worth having some conversation about
