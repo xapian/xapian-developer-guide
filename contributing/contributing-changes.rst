@@ -147,6 +147,18 @@ Github or not. In both cases, review and acceptance of the changes
 will generally go more easily if you've included tests, updated
 documentation and so on :ref:`as discussed earlier<patch-guidelines>`.
 
+Pull requests via Github will have the tests run automatically on a
+variety of platforms. This means that you should run the tests before
+creating a pull request (since it's not worth reviewing something
+where the tests are failing -- you may have to make significant
+changes to get the tests to pass, so reviewing too early could be a
+waste of everyone's time).
+
+Of course, if you have difficulty getting the tests to pass on your
+local machine, or if locally they do pass but fail on the automated
+systems connected to Github but you can't figure out why, then
+:ref:`get in touch<contact>` and someone should be able to help.
+
 Attach a patch directly to the trac ticket
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
