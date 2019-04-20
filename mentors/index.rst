@@ -159,7 +159,7 @@ Pull requests where the automated tests aren't passing
   ``xapian-maintainer-tools/xapian-check-patch`` script. Something
   like this is often what you want:
 
-  .. code-block: bash
+  .. code-block:: bash
 
      git diff master..HEAD | xapian-maintainer-tools/xapian-check-patch
 
