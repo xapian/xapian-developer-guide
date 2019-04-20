@@ -42,10 +42,20 @@ Please configure your editor to:
 * use Unix line endings (so each line ends with just LF, rather than
   CR+LF)
 
-We don't currently have a formal coding standards document, so
-you should try to follow the style of the existing
-code. In particular, it's a good idea to pay close attention
-to code alignment and where we have spaces.
+We don't currently have a formal coding standards document, so you
+should try to follow the style of the existing code. In particular,
+it's a good idea to pay close attention to code alignment and where we
+have spaces.
+
+We have a small tool that can help spot common formatting
+problems. It's run on all :ref:`pull requests<pull requests>`,
+so it's a good idea to run it on your changes. From a clone of the
+Xapian source tree, the following will tell you if there are any
+problems in the changes you've made since you branched from master:
+
+.. code-block:: bash
+
+   git diff master..HEAD | xapian-maintainer-tools/xapian-check-patch
 
 Updated documentation
 ~~~~~~~~~~~~~~~~~~~~~
