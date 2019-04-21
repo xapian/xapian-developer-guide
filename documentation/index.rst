@@ -10,7 +10,7 @@ There are a number of types of documentation available for Xapian.
    typically either as a "full worked example", or as a deep dive into
    a particular feature.
 
-   Most of this documentation lives in the*Xapian user guide*, which
+   Most of this documentation lives in the *Xapian user guide*, which
    is available `online`_ (built with python examples)
    and as `a git repo on Github`_ which
    you can build for a range of different languages.
@@ -34,7 +34,7 @@ There are a number of types of documentation available for Xapian.
 4. `The Xapian wiki`_ also contains information, including links
    to articles and talks that people have written about using Xapian
    in various ways. Although this isn't always official Xapian
-   documentation, it may be helpfuil. Some of it may now be quite out
+   documentation, it may be helpful. Some of it may now be quite out
    of date, so if something you find there doesn't work, you may want
    to check the official documentation to see if you can figure out
    how to change the advice or code you find to work with a recent
@@ -59,27 +59,12 @@ There are a number of types of documentation available for Xapian.
 .. _their own documentation: https://xapian.org/docs/bindings/
 
 
-Building the User guide and developer guide
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Building the documentation
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The user guide and developers guide can both be built using Sphinx.
-Generally, you will just need to:
+The user guide and developers guide can both be built using Sphinx;
+there is more information in a ``README.md`` in each repository.
 
-.. code-block:: bash
-
-   pip install -r requirements.txt
-   make html
-
-For the user guide, you can control which language the examples use by
-setting the ``LANGUAGE`` variable when you call make:
-
-.. code-block:: bash
-
-   make html LANGUAGE=c++
-
-Building documentation in the Xapian source code
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   
 If you're building from a clone of Xapian, then the API docs will be
 built automatically as part of building Xapian. (If you've downloaded
 a source tarball, then the API docs will already have been built for
