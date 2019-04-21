@@ -178,6 +178,44 @@ Again, the tests for xapian-core are run first, then Omega and then
 the language bindings. If any test fails, the build system will stop
 there.
 
+A quick note about the build system
+-----------------------------------
+
+Here, we've been working from a clone of the Xapian git repository,
+which means that the following options are on by default.
+However if you are ever building from a source tarball,
+the following may be of use.
+
+``--enable-maintainer-mode``
+	This tells configure to enable make dependencies for
+	regenerating build system files (such as ``configure``,
+	``Makefile.in``, and ``Makefile``) and other generated files (such as
+	the stemmers and query parser) when required.  These are
+	disabled by default as some make programs try to rebuild them
+	when it's not appropriate (e.g. BSD make doesn't handle VPATH
+	except for implicit rules).  For this reason, we recommend GNU
+	make if you enable maintainer mode.
+
+        You'll also need a non-cross-compiling C compiler for
+	compiling the Lemon parser generator and the Snowball stemming
+	algorithm compiler.  The configure script will attempt to
+	locate one, but you can override this autodetection by passing
+        ``CC_FOR_BUILD`` on the command line like so:
+
+        .. code-block:: bash
+
+           ./configure CC_FOR_BUILD=/opt/bin/gcc
+
+``--enable-documentation``
+	This tells configure to enable make dependencies for regenerating
+	documentation files.  By default it uses the same setting as
+	``--enable-maintainer-mode``.
+
+Xapian's build system has a lot of other options you can use to
+control exactly what gets built and in what ways. Check out help
+information for the various tools for more information, such as
+``./bootstrap --help`` and ``./configure --help``.
+
 Summary
 -------
 
