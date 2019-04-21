@@ -83,6 +83,7 @@ Contents
    documentation/index
    contributing/index
    mentors/index
+   releases/index
    LICENSE
 
 .. some other pieces from HACKING that could live here
