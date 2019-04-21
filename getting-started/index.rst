@@ -220,10 +220,5 @@ Summary
 -------
 
 Now you've got everything working, you probably want to look at
-:ref:`writing code<writing-code>`, or if you're trying to fix a bug
+:ref:`contributing to Xapian<contributing>`, or if you're trying to fix a bug
 then you might want to learn about :ref:`debugging Xapian<debugging>`.
-
-.. todo::
-
-   The other sections of the manual haven't been written yet, so this
-   part isn't terribly helpful. Sorry!
