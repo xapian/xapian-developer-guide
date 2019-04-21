@@ -26,10 +26,10 @@ working with the entire source tree rather than individual pieces. The
 Xapian build system has some support for this, but let's get you a
 copy of everything first:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ git clone git://git.xapian.org/xapian
-     $ cd xapian
+   $ git clone git://git.xapian.org/xapian
+   $ cd xapian
 
 This will 'clone' a complete copy of the Xapian source code, including
 not only the core library but also the various language bindings (for
@@ -46,13 +46,13 @@ Debian / Ubuntu
 For a recent version of Debian or Ubuntu, this command should ensure you have
 all the necessary tools and libraries:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ apt-get install build-essential m4 perl python zlib1g-dev uuid-dev \
-       wget bison tcl libpcre3-dev libmagic-dev valgrind ccache eatmydata \
-       doxygen graphviz help2man python-docutils pngcrush python-sphinx \
-       python3-sphinx mono-devel openjdk-8-jdk lua5.2 liblua5.2-dev \
-       php-dev php-cli python-dev python3-dev ruby-dev tcl-dev texinfo
+   $ apt-get install build-essential m4 perl python zlib1g-dev uuid-dev \
+     wget bison tcl libpcre3-dev libmagic-dev valgrind ccache eatmydata \
+     doxygen graphviz help2man python-docutils pngcrush python-sphinx \
+     python3-sphinx mono-devel openjdk-8-jdk lua5.2 liblua5.2-dev \
+     php-dev php-cli python-dev python3-dev ruby-dev tcl-dev texinfo
 
 OS X
 ~~~~
@@ -66,14 +66,14 @@ additional libraries and tools on OS X. Once you've installed XCode
 and homebrew, you can get all the dependencies you need for Xapian
 using:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ brew install libmagic pcre \
-       lua mono perl php python python3 ruby tcl-tk \
-       doxygen help2man graphviz pngcrush
-     # and some python-specific documentation tools
-     $ pip install sphinx docutils
-     $ pip3 install sphinx
+   $ brew install libmagic pcre \
+     lua mono perl php python python3 ruby tcl-tk \
+     doxygen help2man graphviz pngcrush
+   # and some python-specific documentation tools
+   $ pip install sphinx docutils
+   $ pip3 install sphinx
 
 (We install documentation tools for both python2 and python3, in the
 same way we build the bindings for both of them.)
@@ -92,9 +92,9 @@ well as downloading and building some tools for which we require very
 precise versions. You should run this command in the ``xapian``
 directory that was created earlier when you cloned the source code:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ ./bootstrap
+   $ ./bootstrap
 
 To download tools, bootstrap will use ``wget``, ``curl`` or
 ``lwp-request`` if installed.  If not, it will give an error telling
@@ -128,33 +128,35 @@ Configuring the code
 
 Configuring the code is mostly about Xapian's build system
 automatically detecting where all its dependencies are on your
-computer, so it knows how to use them. However there are :ref:`various
-options<configure-options>` that allow you to either override the
-autodetection (for instance if you wanted to build python bindings
-against a particular version of python) or change some defaults. For
-now, however, we'll just run it accepting all its defaults:
+computer, so it knows how to use them. However there are various
+options that allow you to either override the autodetection
+(for instance if you wanted to build python bindings
+against a particular version of python) or change some defaults.
+To find out about the configure options available, you can run
+``configure --help``. For now, however, we'll just run it accepting
+all its defaults:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ ./configure
+   $ ./configure
 
 Note that on OS X you probably want to turn off the Perl and TCL8
 bindings when developing, as there are some complexities when
 developing against the system versions, and the homebrew versions are
 slightly awkward:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ ./configure --without-perl --without-tcl
+   $ ./configure --without-perl --without-tcl
 
 Building Xapian
 ~~~~~~~~~~~~~~~
 
 Building Xapian is just a matter of typing:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ make
+   $ make
 
 First it will build xapian-core, the core library. Then it will build
 Omega and the language bindings, using the version of xapian-core
@@ -168,9 +170,9 @@ Running the tests
 Xapian has a comprehensive test suite, and it's a good idea to get
 into the habit of running it. From the top of the clone, just run:
 
-  .. code-block:: bash
+.. code-block:: bash
 
-     $ make check
+   $ make check
 
 Again, the tests for xapian-core are run first, then Omega and then
 the language bindings. If any test fails, the build system will stop

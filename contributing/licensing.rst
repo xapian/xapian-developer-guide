@@ -14,9 +14,9 @@ Patches which are submitted to Xapian will only be included if the
 copyright holder(s) dual-license them under each of the following
 licences:
 
- - GPL version 2 and all later versions (see the file `COPYING`_
-   in ``xapian-core`` for details).
- - MIT/X license::
+- GPL version 2 and all later versions (see the file `COPYING`_
+  in ``xapian-core`` for details).
+- MIT/X license::
 
     Copyright (c) <year> <copyright holders>
 

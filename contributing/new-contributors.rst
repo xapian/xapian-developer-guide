@@ -73,43 +73,43 @@ Picking something to start with
 
 It can be difficult sometimes to find a place to start, so here are some suggestions:
 
- * Start small.
+* Start small.
 
-   By picking a small contribution first, other people can help you
-   with details of how Xapian's documentation, code and so on
-   work. It's much easier to get feedback on a small change to start
-   off with.
+  By picking a small contribution first, other people can help you
+  with details of how Xapian's documentation, code and so on
+  work. It's much easier to get feedback on a small change to start
+  off with.
 
-   If documentation is your thing, then you might like to take a look
-   at our list of missing documentation_.
+  If documentation is your thing, then you might like to take a look
+  at our list of missing documentation_.
  
-   On the features side, our `bite-sized projects`_ are intended to
-   be suitable for someone new to Xapian to pick up. We've tried to
-   have a range of things to work on across different parts of Xapian.
+  On the features side, our `bite-sized projects`_ are intended to
+  be suitable for someone new to Xapian to pick up. We've tried to
+  have a range of things to work on across different parts of Xapian.
 
-   .. note::
+  .. note::
 
-      No change is too small to consider! Some people's first
-      contributions to an open source project are fixing a single stray
-      letter in documentation, or adding a line break where one is
-      needed.
+     No change is too small to consider! Some people's first
+     contributions to an open source project are fixing a single stray
+     letter in documentation, or adding a line break where one is
+     needed.
 
 .. _documentation: https://trac.xapian.org/wiki/MissingDocumentation
 .. _bite-sized projects: https://trac.xapian.org/wiki/ProjectIdeas#BiteSize
  
- * Pick something you care about, or which you already have some
-   knowledge of.
+* Pick something you care about, or which you already have some
+  knowledge of.
 
-   For instance, if you've been using Omega, you might want to pick up
-   a small bug or feature for that. Or if you've studied (or are
-   studying now!) different Information Retrieval weighting schemes,
-   you might want to implement one of the ones we don't currently
-   support.
+  For instance, if you've been using Omega, you might want to pick up
+  a small bug or feature for that. Or if you've studied (or are
+  studying now!) different Information Retrieval weighting schemes,
+  you might want to implement one of the ones we don't currently
+  support.
 
- * Don't be afraid to :ref:`ask for help <contact>`.
+* Don't be afraid to :ref:`ask for help <contact>`.
 
-   Please pop onto the mailing list or IRC if you need any help in
-   getting started or picking something to work on.
+  Please pop onto the mailing list or IRC if you need any help in
+  getting started or picking something to work on.
 
 Do some work
 ------------
