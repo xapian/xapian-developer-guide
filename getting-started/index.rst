@@ -7,7 +7,7 @@ Getting started
 
    Currently this guide is written assuming you are either developing
    on something like Unix (probably either Linux or OS X). You can use
-   software suchas `Virtual Box <https://www.virtualbox.org/>`_ to run
+   software such as `Virtual Box <https://www.virtualbox.org/>`_ to run
    a 'virtual' Linux machine on another operating system; in this case
    we recommend using the most recent `Ubuntu LTS
    release <https://wiki.ubuntu.com/LTS>`_.
