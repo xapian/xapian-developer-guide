@@ -13,17 +13,8 @@ at our `Xapian user manual`_.
 
 .. note::
 
-   This is very early days for this guide, so please let us know any
-   issues you spot or how we can improve it in any way. There's a lot
-   of additional information about developing for Xapian in the
-   `HACKING file in xapian-core`_ which we hope to move here in
-   future, and in the meantime that's a good place to look for
-   information on writing and running tests, debugging, and options
-   available when configuring the source tree. It also contains our
-   documentation for making a Xapian release.
-
-.. _HACKING file in xapian-core:
-   https://github.com/xapian/xapian/blob/master/xapian-core/HACKING
+   This is early days for this guide, so please let us know any
+   issues you spot or how we can improve it in any way.
 
 Since Xapian is an open source project, it is entirely dependent on
 contributions -- many of them from people like you! These
@@ -104,3 +95,5 @@ Contents
    build-system/index [ configure options ]
    tests/index [ eatmydata, debugging, valgrind, make targets, running individual tests, lldb/gdb, gprof/purify/insure/lcov, data -> db indexing (tests/testdata & code in tests/harness/)), where the dbs live (eg tests/.glass) ]
    releases/index [how to make a release, Debian packages]
+
+.. todo:: There needs to be a section about OS X and bindings, somewhere.
