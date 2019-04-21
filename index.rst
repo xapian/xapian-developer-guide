@@ -47,7 +47,9 @@ contributors<advice for new contributors>`.
 
 .. todo::
 
-   Talk about how to manage security issues.
+   Talk about how to manage security issues. `This article`_ may be helpful.
+
+   .. _This article: https://thoughtbot.com/blog/handling-security-issues-in-open-source-projects
 
 .. _contact:
 
