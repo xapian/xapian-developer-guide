@@ -80,3 +80,38 @@ depending on whether it failed or not.
 In addition, there are a bunch of macros to help you perform standards
 testing tasks. Things like TEST\_EQUAL are all in
 ``tests/harness/testsuite.h``. They're pretty simple to use.
+
+Test databases
+--------------
+
+Many of the automated tests work by building a small test database and
+then testing a particular library feature against it. To make things
+easier, the test harness provides a way of doing this without having
+to write indexing code for every test.
+
+Typically you use this by starting your test case with:
+
+.. code-block:: c++
+
+   Xapian::Database db(get_database("dataset"));
+
+which would then index the data in ``tests/testdata/dataset.txt`` and
+return an open database object.
+
+You can also get an empty writable database, giving it a name:
+
+.. code-block:: c++
+
+   Xapian::WritableDatabase db(get_named_writable_database("testdbname"));
+
+The actual database files are generally put into ``tests/.<dbtype>``
+using either the name (for `get_named_writable_database()` or the
+dataset(s) used. So you can end up with database paths such as::
+
+  tests/.glass/db__apitest_allterms
+  tests/.honey/db__apitest_allterms
+
+The various functions that support this are declared in the header
+``tests/apitest.h``, and ``tests/harness/backendmanager.h`` contains doc
+comments that will help. (The functions pass through to the particular
+backend manager being used.)
