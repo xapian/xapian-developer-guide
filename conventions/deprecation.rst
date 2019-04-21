@@ -65,3 +65,44 @@ You can simply mark a method defined inline in a class with
         // This failed to compile with GCC 3.3.5.
         XAPIAN_DEPRECATED(int old_inline_method()) { return 42; }
     };
+
+Implementing Deprecation Warnings for the Bindings
+--------------------------------------------------
+
+Currently we don't have an equivalent of the C++ ``XAPIAN_DEPRECATED()`` macro
+for the bindings, but it would be good to have.  Here are some notes on how
+this could be achieved for various languages we support:
+
+* PHP now has a E_USER_DEPRECATED error level - in a deprecated method we
+  could do::
+
+      trigger_error(
+          'World::hi() is deprecated, use World::hello() instead',
+          XAPIAN_DEPRECATED
+      );
+
+* Python has DeprecationWarning, which we were using in 1.2.x a bit::
+
+      warnings.warn(
+          'World::hi() is deprecated, use World::hello() instead',
+          DeprecationWarning,
+      )
+
+* Ruby - there are external libraries to handle deprecation warnings, but the
+  simplest option without external dependencies seems to be::
+
+      warn '[DEPRECATION] 'World::hi() is deprecated, use World::hello() instead')
+
+* Perl::
+
+     use warnings;
+     warnings::warnif('deprecated', 'World::hi() is deprecated, use World::hello() instead');
+
+* Java has ``@Deprecated``, but I think that's a documentation thing only.
+
+It would be great (but probably hard) to reuse the ``XAPIAN_DEPRECATION()``
+markers.  Perhaps parsing the doxygen XML for ``@deprecated`` markers would
+be simpler?
+
+Also, it would be good if the warnings could be turned off easily, as runtime
+deprecation warnings can be annoying for end users.
