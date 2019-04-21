@@ -35,10 +35,10 @@ users.
 
 This guide is intended to:
 
- * help you understand how to make and contribute changes to Xapian
+* help you understand how to make and contribute changes to Xapian
 
- * lay out some of our "rules of the road", which are there to make it
-   easier for everyone to collaborate on Xapian
+* lay out some of our "rules of the road", which are there to make it
+  easier for everyone to collaborate on Xapian
 
 We recommend you at least skim through all of this guide, so you know
 what information is available to you. However, if you absolutely must
@@ -57,18 +57,18 @@ Getting in touch
 The Xapian community typically works "in the open", via mailing lists and an
 IRC channel:
 
- * Our `mailing lists <https://xapian.org/lists>`_ are open for anyone to
-   join, although (because we don't want to relay spam to everyone) if you
-   aren't subscribed to the list someone will have to manually approve your
-   message. Please be patient and don't resend a message just because it
-   doesn't appear right away.
+* Our `mailing lists <https://xapian.org/lists>`_ are open for anyone to
+  join, although (because we don't want to relay spam to everyone) if you
+  aren't subscribed to the list someone will have to manually approve your
+  message. Please be patient and don't resend a message just because it
+  doesn't appear right away.
 
- * We're on `#xapian <https://webchat.freenode.net/?channels=%23xapian>`_ on
-   ``irc.freenode.net``. IRC is a simple text chat system where many members
-   of the community hang out; although because we're distributed around the
-   world, you may not get an instant response. That doesn't mean we're
-   ignoring you, so either hang on for a reply, or you can use the mailing
-   list instead.
+* We're on `#xapian <https://webchat.freenode.net/?channels=%23xapian>`_ on
+  ``irc.freenode.net``. IRC is a simple text chat system where many members
+  of the community hang out; although because we're distributed around the
+  world, you may not get an instant response. That doesn't mean we're
+  ignoring you, so either hang on for a reply, or you can use the mailing
+  list instead.
 
 .. This would be a good place to talk about a CoC.
 
