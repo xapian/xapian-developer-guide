@@ -81,6 +81,7 @@ Contents
    getting-started/index
    conventions/index
    documentation/index
+   tests/index
    contributing/index
    mentors/index
    releases/index
