@@ -77,9 +77,9 @@ Header Portability Issues
   Don't directly ``#include <unistd.h>`` - instead ``#include
   "safeunistd.h"`` -- MSVC doesn't even HAVE unistd.h!
 
-  The various "safe" headers are maintained in ``xapian-core/common``,
-  but also used by Omega.  Currently bootstrap sorts out setting up a
-  copy of this subdirectory via a secondary git checkout.
+The various "safe" headers are maintained in ``xapian-core/common``,
+but also used by Omega.  Currently bootstrap sorts out setting up a
+copy of this subdirectory via a secondary git checkout.
 
 
 Warning-Free Compilation
