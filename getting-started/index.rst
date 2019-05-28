@@ -61,7 +61,7 @@ You need to install Apple's XCode tools, which contain their compiler,
 debugger and various other tools. You can do that from within the
 AppStore.
 
-We recommend using `homebrew <http://brew.sh/>`_ to install and manage
+We recommend using `homebrew <https://brew.sh/>`_ to install and manage
 additional libraries and tools on OS X. Once you've installed XCode
 and homebrew, you can get all the dependencies you need for Xapian
 using:

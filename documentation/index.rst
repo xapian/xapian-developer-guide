@@ -134,7 +134,7 @@ For a recent version of Debian or Ubuntu, this command should work:
        texlive-binaries texlive-fonts-extra texlive-fonts-recommended \
        texlive-latex-extra texlive-latex-recommended
 
-On OS X, you can install `MacTeX <http://www.tug.org/mactex/>`_.
+On OS X, you can install `MacTeX <https://www.tug.org/mactex/>`_.
 
 Once you've got the extra tools you need, you can build the PDF documentation:
 
