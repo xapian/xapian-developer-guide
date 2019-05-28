@@ -214,7 +214,7 @@ online, such as `Pro Git`_.
    `Goal-Oriented Git`_ by George Brocklehurst.
 
 .. _"5 Useful Tips For A Better Commit Message":
-   https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
+   https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
 .. _Goal-Oriented Git: https://gumroad.com/l/gWds
 .. _Pro Git: https://git-scm.com/book/en/v2
 .. _How to raise a good pull request:
