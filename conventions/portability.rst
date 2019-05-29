@@ -172,10 +172,11 @@ Here's an incomplete list of things to avoid:
   Note that versions of these (GNU versions in particular) support switches
   which aren't portable - notably, "test -r" isn't portable; neither is
   "cp -a".  And note that "mkdir -p" isn't portable - the semantics vary.
-  The autoconf manual has some useful information about writing portable
-  shell code (most of it not specific to autoconf)::
+  The autoconf manual has some `useful information about writing portable
+  shell code`_ (most of it not specific to autoconf).
 
-    https://www.gnu.org/software/autoconf/manual/autoconf.html#Portable-Shell
+.. _useful information about writing portable shell code:
+   https://www.gnu.org/software/autoconf/manual/autoconf.html#Portable-Shell
 
 * Don't use "include" - it's not present in BSD make (at least some versions
   have ".include" instead, but that doesn't really seem to help...)  Automake
@@ -310,4 +311,4 @@ the use "make -s" to suppress the echoing of commands.
 
 Using ``@echo`` on a message sent to stdout or stderr is acceptable
 (since it avoids showing the message twice).  Otherwise don't use
-"@" - it makes it harder to track down problems in the makefiles.
+``@`` - it makes it harder to track down problems in the makefiles.
