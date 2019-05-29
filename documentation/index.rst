@@ -123,7 +123,7 @@ install some more tools:
   texlive-base-bin for older releases)
 
 Note that pdflatex, epstopdf, gs, and makeindex must all currently be on your
-path (as specified by the environmental variable PATH), since doxygen will look
+path (as specified by the environment variable PATH), since doxygen will look
 for them there.
 
 For a recent version of Debian or Ubuntu, this command should work:
