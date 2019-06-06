@@ -152,30 +152,58 @@ To use Insure (another proprietary tool):
 Using lcov
 ~~~~~~~~~~
 
-To use lcov (at least version 1.10) to generate a test coverage report (see
-`lcov.xapian.org <http://lcov.xapian.org/>`_ for reports) there are three make
-targets (all in the ``xapian-core`` directory):
-
-* ``make coverage-reconfigure``: reruns configure in the source tree.  See
-  Makefile.am for details of the configure options used and why they
-  are needed.  If you're using ccache, make sure it's at least version
-  3.0, and ideally at least 3.2.2.
-
-* ``make coverage-reconfigure-maintainer-mode``: does the same thing, except
-  the tree is configured in "maintainer mode", which is what you want if
-  generating coverage reports while working on the code.
-
-* ``make coverage-check``: runs ``make check`` and generates an HTML report in a
-  directory called ``lcov``.
-
-  + You can specify extra arguments to pass to the ``genhtml`` tool using
-    ``GENHTML_ARGS``, so for example if you plan to serve the generated HTML
-    coverage report from a webserver, you might use:
-    ``make coverage-check GENHTML_ARGS=--html-gzip``
-
+You can use lcov (at least version 1.10) to generate a test coverage report.
 You ideally want lcov 1.11 or later, since 1.11 includes patches to reduce
 memory usage significantly - lcov 1.10 would run out of memory in a 1GB VM.
 
+See `lcov.xapian.org <http://lcov.xapian.org/>`_ for automatically generated
+reports for git master.
+
+If you use ccache, you'll need ccache >= 3.2.2 for coverage builds to actually
+be cached.  Since ccache 3.0 (released 2010-06-20) coverage builds are
+supported, but initially by disabling caching if the coverage options are used.
+See below for a workaround for ccache < 3.0.
+
+There are three make targets (currently supported in the ``xapian-core`` and
+``xapian-letor`` directories):
+
+``make coverage-reconfigure``
+  This reruns configure in the source tree with options to configure the build
+  to generate coverage information.  See ``Makefile.am`` for details of the
+  configure options used and why they are needed.
+
+  You can specify additional options via ``COVERAGE_CONFIGURE_ARGS`` on the
+  ``make`` command line.  For example:
+
+  * To configure ``xapian-letor`` to use the in-tree ``xapian-core`` use::
+
+      make coverage-reconfigure COVERAGE_CONFIGURE_ARGS=XAPIAN_CONFIG="`pwd`/../xapian-core/xapian-config
+
+  * If you're using ccache < 3.0 this doesn't support coverage builds.  To
+    work around this you can disable use of ccache with::
+
+      make coverage-reconfigure COVERAGE_CONFIGURE_ARGS=CCACHE_DISABLE=1
+
+  * On older systems, coverage reports don't seem to work with shared
+    libraries.  To work around this disable use of shared libraries with::
+
+      make coverage-reconfigure COVERAGE_CONFIGURE_ARGS=--disable-shared
+
+``make coverage-reconfigure-maintainer-mode``
+  This does the same thing, except the tree is configured in "maintainer mode",
+  which is what you want if generating coverage reports while working on the
+  code.
+
+``make coverage-check``
+  This runs ``make check`` and generates an HTML report in a directory called
+  ``lcov``.
+
+  You can specify extra arguments to pass to the ``genhtml`` tool using
+  ``GENHTML_ARGS``, so for example if you plan to serve the generated HTML
+  coverage report from a webserver, you can tell ``genhtml`` to gzip all
+  generated HTML files and add a suitable ``.htaccess`` file using::
+
+    make coverage-check GENHTML_ARGS=--html-gzip
 
 Using valgrind
 ~~~~~~~~~~~~~~
