@@ -6,6 +6,20 @@ C++ conventions
 Code layout
 ~~~~~~~~~~~
 
+Editor configuration
+--------------------
+
+vim
+^^^
+
+If you use the ``vim`` or ``neovim`` editor, then these settings will
+help you lay out code to match Xapian C++ coding conventions::
+
+   set sw=4
+   set sts=4
+   set noet
+   set cinoptions=l1,g0.5s,h0.5s,:0.5s,=0.5s,t0,(0
+
 Indentation
 -----------
 
