@@ -96,7 +96,7 @@ C++ idioms in Xapian
 
 * Prefer ``++i;`` to ``i++;``, ``i += 1;``, or ``i = i + 1``.  For
   simple integer variables these should generate equivalent (if not
-  identical) code, but if i is an iterator object then the
+  identical) code, but if ``i`` is an iterator object then the
   pre-increment form can be more efficient in some cases with some
   compilers.  It's simpler and more consistent to always use the
   pre-increment form (unless you make use of the old value which the
