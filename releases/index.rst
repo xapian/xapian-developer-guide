@@ -46,8 +46,8 @@ This is a (hopefully complete) list of the jobs which need doing:
 
   Fill in https://trac.xapian.org/wiki/ReleaseOverview/1.4.12
 
-  Also update the roadmap at https://trac.xapian.org/wiki/RoadMap with
-  estimated date for next release.
+  If the next release isn't likely to be in 2 months time, update the roadmap
+  at https://trac.xapian.org/wiki/RoadMap with a revised estimated date.
 
 * Update the website: ``generate`` in the ``www.xapian.org`` git repo
   contains the latest version and the date it was released.
