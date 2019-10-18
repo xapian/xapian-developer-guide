@@ -220,7 +220,7 @@ highlight_language = None
 for t in ['php', 'c++', 'python', 'python3', 'csharp', 'java', 'lua', 'perl', 'ruby', 'tcl']:
     if tags.has(t):
         if not highlight_language is None:
-            print "Multiple language tags set (at least %s and %s)" % (highlight_language, t)
+            print("Multiple language tags set (at least %s and %s)" % (highlight_language, t))
             sys.exit(1)
         highlight_language = t
 
@@ -300,7 +300,7 @@ def xapian_code_example_command(ex):
         return "javac %s\njava %s" \
             % (xapian_code_example_filename(ex), ex)
     else:
-        print "Unhandled highlight_language '%s'" % highlight_language
+        print("Unhandled highlight_language '%s'" % highlight_language)
         sys.exit(1)
 
 # Lookup tool name in the environment with default.
@@ -342,7 +342,7 @@ def xapian_run_example_command(ex):
         xcopt = '--libs'
         if xapian_config != 'xapian-config' and not xapian_config.startswith('/usr/'):
             if os.system('%s --ltlibs > /dev/null 2>&1' % xapian_config) != 0:
-                print "'%s --ltlibs' doesn't work" % xapian_config
+                print("'%s --ltlibs' doesn't work" % xapian_config)
                 sys.exit(1)
             if os.system('%s --libs > /dev/null 2>&1' % xapian_config) != 0:
                 pfx = 'libtool --quiet --mode=link '
@@ -359,7 +359,7 @@ def xapian_run_example_command(ex):
         return "%s %s\n%s %s" \
             % (javac, xapian_code_example_filename(ex), java, ex)
     else:
-        print "Unhandled highlight_language '%s'" % highlight_language
+        print("Unhandled highlight_language '%s'" % highlight_language)
         sys.exit(1)
 
 class XapianCodeExample(LiteralInclude):
@@ -442,8 +442,8 @@ class XapianRunExample(LiteralInclude):
             args = ''
             filename = filename + ".out"
         if not os.path.exists(filename):
-            print '*** No output file %s in language %s - patches welcome!' \
-                % (filename, highlight_language)
+            print('*** No output file %s in language %s - patches welcome!' \
+                % (filename, highlight_language))
 
         global examples_used, examples_in_order
         examples_in_order.append((self.arguments[0], args, cleanfirst, shouldfail))
@@ -544,7 +544,7 @@ def xapian_class_role(typ, rawtext, etext, lineno, inliner,
     elif highlight_language == 'tcl':
         return [nodes.literal(text = 'xapian::' + c)], []
     else:
-        print "Unhandled highlight_language '%s'" % highlight_language
+        print("Unhandled highlight_language '%s'" % highlight_language)
         sys.exit(1)
 
 def decorate_param(m):
@@ -600,7 +600,7 @@ def xapian_method_role(typ, rawtext, etext, lineno, inliner,
     elif highlight_language == 'tcl':
         return [nodes.literal(text = 'xapian::' + cm)], []
     else:
-        print "Unhandled highlight_language '%s'" % highlight_language
+        print("Unhandled highlight_language '%s'" % highlight_language)
         sys.exit(1)
 
 def xapian_variable_role(typ, rawtext, etext, lineno, inliner,
@@ -627,7 +627,7 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
         elif t == 'NULL':
             t = 'null'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
     elif highlight_language == 'java':
@@ -640,7 +640,7 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
         elif t == 'NULL':
             t = 'null'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
     elif highlight_language == 'lua':
@@ -654,7 +654,7 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
         elif t == 'NULL':
             t = 'nil'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
     elif highlight_language == 'perl':
@@ -667,7 +667,7 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
         elif t == 'NULL':
             t = 'undef'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
     elif highlight_language == 'php':
@@ -682,7 +682,7 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
         elif t == 'NULL':
             t = 'NULL'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
     elif highlight_language.startswith('python'):
@@ -695,7 +695,7 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
         elif t == 'NULL':
             t = 'None'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
     elif highlight_language == 'ruby':
@@ -708,7 +708,7 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
         elif t == 'NULL':
             t = 'nil'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
     elif highlight_language == 'tcl':
@@ -726,12 +726,12 @@ def xapian_literal_role(typ, rawtext, etext, lineno, inliner,
             # http://www.swig.org/Doc4.0/Tcl.html#Tcl_nn19
             t = 'NULL'
         else:
-            print "Unhandled literal '%s' for %s" % (t, highlight_language)
+            print("Unhandled literal '%s' for %s" % (t, highlight_language))
             sys.exit(1)
         return [nodes.literal(text = t)], []
 
     else:
-        print "Unhandled highlight_language '%s'" % highlight_language
+        print("Unhandled highlight_language '%s'" % highlight_language)
         sys.exit(1)
 
 # Usage:
@@ -772,11 +772,11 @@ def xapian_check_examples():
             continue
         if ex in examples_missing:
             continue
-        print "Example %s isn't shown to be run anywhere" % ex
+        print("Example %s isn't shown to be run anywhere" % ex)
         bad = True
 
     for ex in examples_used:
-        print "Example %s is used but never shown anywhere" % ex
+        print("Example %s is used but never shown anywhere" % ex)
         bad = True
 
     # Process the commands in order so that the correct databases have been
@@ -796,10 +796,10 @@ def xapian_check_examples():
         os.system("cat tmp2.out >> tmp.out")
         if shouldfail:
             if status == 0:
-                print '%s: Exit status 0, expected failure' % filename
+                print('%s: Exit status 0, expected failure' % filename)
         else:
             if status != 0:
-                print '%s: Exit status %d, expected 0' % (filename, status)
+                print('%s: Exit status %d, expected 0' % (filename, status))
         esc_args = xapian_escape_args(args)
         fullout = "%s.%s.out" % (filename, esc_args)
         tmp_out = "%s.%s.tmp" % (filename, esc_args)
@@ -809,14 +809,14 @@ def xapian_check_examples():
         else:
             filename = filename + ".out"
         if not os.path.exists(filename):
-            print '*** No output file %s in language %s - patches welcome!' \
-                % (filename, highlight_language)
+            print('*** No output file %s in language %s - patches welcome!' \
+                % (filename, highlight_language))
             os.unlink("tmp2.out")
         else:
             sys.stdout.flush()
             if os.system("diff -u %s %s 2>&1" % (tmp_out, filename)):
-                print "$ %s %s" % (command, args)
-                print "vimdiff %s %s" % (tmp_out, filename)
+                print("$ %s %s" % (command, args))
+                print("vimdiff %s %s" % (tmp_out, filename))
             else:
                 os.unlink(tmp_out)
                 os.unlink("tmp2.out")
@@ -827,8 +827,8 @@ def xapian_check_examples():
         if ex in m_done:
             continue
         m_done.add(ex)
-        print '*** No version of example %s in language %s - patches welcome!' \
-            % (ex, highlight_language)
+        print('*** No version of example %s in language %s - patches welcome!' \
+            % (ex, highlight_language))
 
     if bad:
         raise SystemExit()
