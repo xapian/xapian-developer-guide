@@ -3,6 +3,15 @@
 Contributing changes
 ====================
 
+If you have a patch to fix a problem in Xapian, or to add a new feature,
+please send it to us for inclusion.  Any major changes should be discussed
+on `the xapian-devel mailing list <https://xapian.org/lists>`_ first.
+
+The rest of this section gives information on how to get your changes
+adopted quickly into Xapian. We have noted some things we aim for in our
+code and our changes, as well as how to get changes to us and some other
+details.
+
 .. _patch-guidelines:
 
 Some things that we look for
