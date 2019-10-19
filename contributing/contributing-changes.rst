@@ -12,6 +12,16 @@ adopted quickly into Xapian. We have noted some things we aim for in our
 code and our changes, as well as how to get changes to us and some other
 details.
 
+License grant
+-------------
+
+We ask everyone contributing changes to Xapian to :ref:`dual-license
+<licensing>` under the GPL (which Xapian currently uses) and the MIT/X
+license (which we would like to move to in future). The simplest way
+to do this is to drop an email to the xapian-devel `mailing list
+<https://xapian.org/lists>`_ stating that you own the copyright on your
+changes and are happy to dual-license accordingly.
+
 .. _patch-guidelines:
 
 Some things that we look for
@@ -137,16 +147,6 @@ If there's an active release branch, please check if the bug is present
 in that branch, and if the fix is appropriate to backport - if the fix
 breaks ABI compatibility or is very invasive, you may need to fix it in
 a different way for the release branch, or decide not to backport the fix.
-
-License grant
--------------
-
-We ask everyone contributing changes to Xapian to :ref:`dual-license
-<licensing>` under the GPL (which Xapian currently uses) and the MIT/X
-license (which we would like to move to in future). The simplest way
-to do this is to drop an email to the xapian-devel `mailing list
-<https://xapian.org/lists>`_ stating that you own the copyright on your
-changes and are happy to dual-license accordingly.
 
 Submit your patch
 -----------------
