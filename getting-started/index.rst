@@ -155,9 +155,43 @@ directory that was created earlier when you cloned the source code:
 
    $ ./bootstrap
 
-To download tools, bootstrap will use ``wget``, ``curl`` or
+To download some tools, bootstrap will use ``wget``, ``curl`` or
 ``lwp-request`` if installed.  If not, it will give an error telling
-you the URL to download from by hand and where to copy the file to.
+you the URL to download from by hand and where to copy the file to. You
+can control whether Xapian tries to download, patch and install autotools
+with the ``--download-tools`` option to ``bootstrap``:
+
+``--download-tools=always``
+       Always download, patch and install autotools we rely on.
+
+``--download-tools=ifneeded`` (the default)
+       Download, patch and install autotools only if your installed version
+       isn't recent enough, or if we have to apply patches that haven't yet
+       been accepted upstream.
+
+``--download-tools=never``
+        Never download and install autotools; always use your installed
+        versions.
+
+        Note that in this case the build may fail if you have out of date
+        versions of the tools, and you may also fall foul of behaviour fixed
+        in our patches.
+
+You can also ask the build system to delete the downloaded and installed
+versions by passing ``--clean``.
+
+Our bootstrap script will check which directories you have checked out,
+so you can bootstrap a partial tree.  You can also ``touch .nobootstrap`` in
+a subdirectory to tell bootstrap to ignore it, or you can pass just the
+directories you want to build as arguments to ``bootstrap``.
+
+If you need to add any extra macro directories to the path searched by aclocal
+(which is part of automake), you can do this by specifying these in the
+``ACLOCAL_FLAGS`` environment variable. For instance:
+
+.. code-block:: bash
+
+   $ ACLOCAL_FLAGS=-I/extra/macro/directory ./bootstrap
 
 .. note::
 
@@ -207,6 +241,19 @@ slightly awkward:
 .. code-block:: bash
 
    $ ./configure --without-perl --without-tcl
+
+Our configure script supports building in a separate directory to
+the sources. Simply create the directory you want to build in, and then run the
+configure script from inside that directory.  For example, to build in a
+directory called "build" (starting in the top level source directory):
+
+.. code-block:: bash
+
+   $ ./bootstrap
+   # output from bootstrap
+   $ mkdir build
+   $ cd build
+   $ ../configure
 
 Building Xapian
 ~~~~~~~~~~~~~~~
@@ -268,7 +315,15 @@ the following may be of use.
 ``--enable-documentation``
 	This tells configure to enable make dependencies for regenerating
 	documentation files.  By default it uses the same setting as
-	``--enable-maintainer-mode``.
+	``--enable-maintainer-mode``. You can turn off documentation
+        rules in maintainer mode (which means that documentation won't be
+        rebuilt on ``make check``, which will save some time) by passing
+        ``--disable-documentation`` to configure.
+
+        Note that ``make dist`` requires the documentation to have been
+        built, and so won't work with a git checkout if you disable
+        building the documentation. You can still configure and build the
+        code itself.
 
 Xapian's build system has a lot of other options you can use to
 control exactly what gets built and in what ways. Check out help
