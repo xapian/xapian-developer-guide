@@ -133,10 +133,18 @@ Building Xapian
 Bootstrapping the code
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Xapian needs to set up a few things with a fresh clone of the code, as
-well as downloading and building some tools for which we require very
-precise versions. You should run this command in the ``xapian``
-directory that was created earlier when you cloned the source code:
+The repository does not contain any automatically generated files
+(such as ``configure``, ``Makefile.in``, Snowball-generated stemmers, Lemon-generated
+parsers, SWIG-generated code, and so on) because experience shows it's best to keep
+these out of version control.  To avoid requiring you to install the correct
+versions of the tools required, we either include the source to these tools in
+the repo directly (in the case of Snowball and Lemon), or the bootstrap script
+will download them as tarballs (autoconf, automake, libtool) or
+from git (SWIG), build them, and install them within the source tree.
+
+The bootstrap script doesn't care what the current directory is, but you
+can easily run it in the ``xapian`` directory that was created earlier when you
+cloned the source code:
 
 .. code-block:: bash
 
