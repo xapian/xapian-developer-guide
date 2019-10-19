@@ -127,6 +127,19 @@ tools installed:
 * `ccache <https://ccache.dev>`_ for faster rebuilds
 * `eatmydata <https://www.flamingspork.com/projects/libeatmydata/>`_ for faster testsuite runs
 
+If you want to be able to build distribution tarballs (with ``make dist``) then
+you'll also need some further tools:
+
+* doxygen (v1.8.8 is used for 1.3.x snapshots and releases; 1.7.6.1 fails to
+  process trunk after ``PL2Weight`` was added).
+* dot (part of Graphviz.  Doxygen's ``DOT_MULTI_TARGETS`` option apparently needs
+  ">1.8.10")
+* help2man
+* rst2html or rst2html.py (``pip install docutils``)
+* pngcrush (optional - used to reduce the size of PNG files in the HTML
+  apidocs)
+* sphinx-doc (``pip install sphinx`` should do)
+
 Building Xapian
 ---------------
 
