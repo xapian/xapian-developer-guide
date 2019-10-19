@@ -180,6 +180,20 @@ you to this file, unless you specifically request us not to. If you see we
 have forgotten to do this, please draw it to our attention so that we can
 address the omission.
 
+Update trac
+-----------
+
+If there's a related trac ticket or other reference for a bug or feature,
+update it (if the issue is completely addressed by the changes you've made,
+then close it). It's also good to mention it in the commit message -- it's a
+great help to future developers trying to work out why a change was made.
+
+If you've fixed a bug, it's helpful to update the release notes for the
+most recent release with a copy of the patch.  If the commit from git
+applies cleanly, you can just link to it.  If it fails to apply, please
+attach an adjusted patch which does. If there are conflicts in test cases
+which aren't easy to resolve, it is fine to just drop those changes from the
+patch if we can still be confident that the issue is actually fixed by the patch.
 
 Consider backporting bug fixes
 ------------------------------
