@@ -124,7 +124,43 @@ If you're adding a new feature, you'll want to write tests that
 it behaves correctly. Thinking about the tests you need to
 write can often help you plan how to implement the feature; it
 can also help when thinking about what API any new classes or
-methods should expose.
+methods should expose. A good set of tests will both ensure
+that the feature isn't broken to start with and detect if later
+changes stop it working as intended.
+
+And of course you should check that the existing tests all continue to
+pass. It's good practice to get into the habit of running tests locally
+as part of your development process, and certainly before you share
+changes with others, such as by opening a Pull Request or sending us a
+patch.
+
+If you don't know how to write tests using the Xapian test rig, then please
+ask.  It's reasonably simple once you've done it once.  There is a brief
+introduction to the Xapian test system in ``docs/tests.html``, as well as
+some helpful information in the :doc:`../tests/index` section of this guide.
+
+
+.. note::
+
+   If you're adding a new testcase to demonstrate an existing bug, and not
+   checking a fix in at the same time, mark the testcase as a known failure (by
+   calling ``XFAIL("explanatory message")`` at the start of your testcase (if
+   necessary this can be conditional on backend or other factors - the backend
+   case has explicit support via ``XFAIL_FOR_BACKEND("backend", "message")``).
+
+   This will mean that this testcase failing will be reported as "XFAIL" which
+   won't cause the test run to fail.  If such a testcase in fact passes, that
+   gets reported as "XPASS" and *will* cause the test run to fail.  A testcase
+   should not be flagged as "XFAIL" for a long time, but it can be useful to be
+   able to add such testcases during development.  It also allows a patch
+   series which fixes a bug to first demonstrate the bug via a new testcase
+   marked as "XFAIL", then fix the bug and remove the "XFAIL" -- this makes it
+   clear that the regression test actually failed before the fix.
+
+   Note that failures which are due to valgrind errors or leaked fds are not
+   affected by this macro -- such errors are inherently not suitable for "XFAIL"
+   as they go away when the testsuite is run without valgrind or on a platform
+   where our fd leak detector code isn't supported.
 
 Updated attributions
 ~~~~~~~~~~~~~~~~~~~~
