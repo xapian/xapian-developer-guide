@@ -146,10 +146,39 @@ Building Xapian
 Bootstrapping the code
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Xapian needs to set up a few things with a fresh clone of the code, as
-well as downloading and building some tools for which we require very
-precise versions. You should run this command in the ``xapian``
-directory that was created earlier when you cloned the source code:
+The easiest way of building Xapian from git master is to use our bootstrap
+script. It takes care of a number of things which are otherwise fiddly to get
+right, including checking you have the right version of various tools we use,
+and setting up the build system for you.
+
+.. note::
+
+   One things that bootstrap does is to set up a top-level ``configure`` script
+   which ensures that the in-tree version of ``xapian-core`` is built first and
+   then used for building everything else. You almost certainly want to build
+   Xapian this way.
+
+   Not using this means you have to check by hand that you're building other
+   subdirectories against the in-tree core library, as by default they will pick
+   any installed copy. An installed copy of Xapian is likely to be a different
+   version to the source tree you are building. Building the git master version
+   of Xapian against an earlier released library will probably fail. If you're
+   working on Xapian then you almost certainly want to build everything against
+   the in-tree version, so you should use ``bootstrap`` and the ``configure``
+   script it creates.
+
+The repository does not contain any automatically generated files
+(such as ``configure``, ``Makefile.in``, Snowball-generated stemmers, Lemon-generated
+parsers, SWIG-generated code, and so on) because experience shows it's best to keep
+these out of version control.  To avoid requiring you to install the correct
+versions of the tools required, we either include the source to these tools in
+the repo directly (in the case of Snowball and Lemon), or the bootstrap script
+will download them as tarballs (autoconf, automake, libtool) or
+from git (SWIG), build them, and install them within the source tree.
+
+The bootstrap script doesn't care what the current directory is, but you
+can easily run it in the ``xapian`` directory that was created earlier when you
+cloned the source code:
 
 .. code-block:: bash
 
