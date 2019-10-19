@@ -78,8 +78,67 @@ using:
 (We install documentation tools for both python2 and python3, in the
 same way we build the bindings for both of them.)
 
-.. On Fedora, yum install libuuid-devel; we need more to bother
-   including this.
+Windows
+~~~~~~~
+
+Building using MSVC is supported by the autotools build system.  You need
+to install a set of Unix-like tools first -- we recommend `MSYS2
+<https://www.msys2.org/>`_.
+
+For details of how to specify MSVC to ``configure`` see the "INSTALL" document
+in ``xapian-core``.
+
+When building from git, by default you'll need some extra tools to generate
+Unicode tables (Tcl) and build documentation (doxygen, help2man, sphinx-doc).
+We don't currently have detailed advice on how to do this (if you can provide
+some then please send a patch).
+
+You can avoid needing Tcl by copying ``xapian-core/unicode/unicode-data.cc``
+from another platform or a release which uses the same Unicode version.  You
+can avoid needing most of the documentation tools by running configure with
+the ``--disable-documentation`` option.
+
+On other platforms
+~~~~~~~~~~~~~~~~~~
+
+You will need the following tools installed to build from git:
+
+* GNU m4 >= 4.6 (for autoconf)
+* perl >= 5.6 (for automake; also for various maintainer scripts)
+* python >= 2.3 (for generating the Python bindings)
+* GNU make (or another make which support VPATH for explicit rules)
+* GNU bison (for building SWIG, used for generating the bindings)
+* Tcl (to generate unicode/unicode-data.cc)
+
+There are also a number of libraries you'll need available, including
+development headers:
+
+* `zlib1g <https://zlib.net>`_
+* `libuuid <https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/tree/libuuid>`_
+* `PCRE <https://www.pcre.org>`_
+* libmagic (which is part of `the open source implementation of file(1) <https://www.darwinsys.com/file/>`_)
+
+.. On Fedora, yum install libuuid-devel -- can we get a more complete list?
+
+If you're doing much development work, you'll probably also want the following
+tools installed:
+
+* `valgrind <http://valgrind.org/>`_ for better testsuite error finding
+* `ccache <https://ccache.dev>`_ for faster rebuilds
+* `eatmydata <https://www.flamingspork.com/projects/libeatmydata/>`_ for faster testsuite runs
+
+If you want to be able to build distribution tarballs (with ``make dist``) then
+you'll also need some further tools:
+
+* doxygen (v1.8.8 is used for 1.3.x snapshots and releases; 1.7.6.1 fails to
+  process git master after ``PL2Weight`` was added).
+* dot (part of Graphviz.  Doxygen's ``DOT_MULTI_TARGETS`` option apparently needs
+  ">1.8.10")
+* help2man
+* rst2html or rst2html.py (``pip install docutils``)
+* pngcrush (optional - used to reduce the size of PNG files in the HTML
+  apidocs)
+* sphinx-doc (``pip install sphinx`` should do)
 
 Building Xapian
 ---------------
