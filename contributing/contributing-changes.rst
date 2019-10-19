@@ -174,7 +174,12 @@ added files which you've written from scratch, they should
 include the GPL boilerplate with your name only.
 
 If you're not in there already, add yourself to the
-``xapian-core/AUTHORS`` file.
+``xapian-core/AUTHORS`` file. If you forget, as well as if we have used
+patches from you, or received helpful reports or advice, we will add
+you to this file, unless you specifically request us not to. If you see we
+have forgotten to do this, please draw it to our attention so that we can
+address the omission.
+
 
 Consider backporting bug fixes
 ------------------------------
