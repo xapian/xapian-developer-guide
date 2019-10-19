@@ -230,6 +230,13 @@ We find patches in unified diff format easiest to work with. ``git diff``
 produces the right output for a single commit (or ``git format-patch``
 for a series of commits).
 
+If you're working from a tarball, you can unpack a second clean copy of the
+files and compare the two versions with ``diff -pruN`` (``-p`` reports the function
+name for each chunk, ``-r`` acts recursively, ``-u`` does a unified diff, and ``-N`` shows
+new files in the diff).  Alternatively ``ptardiff`` (which comes with perl, at
+least on Debian and Ubuntu) can diff against the original tarball, unpacking
+it on the fly.
+
 Someone from the community will then be able to review the patch
 and decide if it needs further work before integrating. If so,
 they'll leave comments on the trac ticket (trac will generally
