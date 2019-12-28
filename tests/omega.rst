@@ -5,14 +5,11 @@ Omega's test suite can be run in the normal fashion:
 ``make check`` within the ``omega`` directory. It runs a number of
 smaller tests, most of them unit testing code that Omega relies on.
 
-``atomparsetest``
-``htmlparsetest``
+``atomparsetest``, ``htmlparsetest``
     Test the ``AtomParser`` and ``MyHtmlParser`` classes respectively,
     which parse Atom and HTML files as part of ``omindex``.
 
-``csvesctest``
-``jsonesctest``
-``urlenctest``
+``csvesctest``, ``jsonesctest``, ``urlenctest``
     Test CSV, JSON, and URL escaping, used by the ``$csv{}``, ``$json{}``,
     and ``$url{}`` OmegaScript commands.
 
