@@ -51,7 +51,7 @@ all the necessary tools and libraries:
    $ apt-get install build-essential m4 perl python zlib1g-dev uuid-dev \
      wget bison tcl libpcre3-dev libmagic-dev valgrind ccache eatmydata \
      doxygen graphviz help2man python-docutils pngcrush python-sphinx \
-     python3-sphinx mono-devel openjdk-8-jdk lua5.2 liblua5.2-dev \
+     python3-sphinx mono-devel default-jdk lua5.3 liblua5.3-dev \
      php-dev php-cli python-dev python3-dev ruby-dev tcl-dev texinfo
 
 macOS
