@@ -131,7 +131,7 @@ If you want to be able to build distribution tarballs (with ``make dist``) then
 you'll also need some further tools:
 
 * doxygen (v1.8.8 is used for 1.3.x snapshots and releases; 1.7.6.1 fails to
-  process trunk after ``PL2Weight`` was added).
+  process git master after ``PL2Weight`` was added).
 * dot (part of Graphviz.  Doxygen's ``DOT_MULTI_TARGETS`` option apparently needs
   ">1.8.10")
 * help2man
