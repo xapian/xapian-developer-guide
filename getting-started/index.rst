@@ -342,6 +342,10 @@ the following may be of use.
 
            ./configure CC_FOR_BUILD=/opt/bin/gcc
 
+        For ``xapian-bindings``, generated files include the bindings
+        glue code, which requires SWIG. You'll need to have maintainer
+        mode enabled if you're going to work on the bindings at all.
+
 ``--enable-documentation``
 	This tells configure to enable make dependencies for regenerating
 	documentation files.  By default it uses the same setting as
