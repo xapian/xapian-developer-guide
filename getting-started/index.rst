@@ -184,16 +184,35 @@ cloned the source code:
 
    $ ./bootstrap
 
-To download tools, bootstrap will use ``wget``, ``curl`` or
+To download some tools, bootstrap will use ``wget``, ``curl`` or
 ``lwp-request`` if installed.  If not, it will give an error telling
-you the URL to download from by hand and where to copy the file to.
-If you wish to prevent bootstrap from downloading and building the autotools
-pass the ``--without-autotools`` option.  You can force it to delete the downloaded
-and installed versions by passing ``--clean``.
+you the URL to download from by hand and where to copy the file to. You
+can control whether Xapian tries to download, patch and install autotools
+with the ``--download-tools`` option to ``bootstrap``:
+
+``--download-tools=always``
+       Always download, patch and install autotools we rely on.
+
+``--download-tools=ifneeded`` (the default)
+       Download, patch and install autotools only if your installed version
+       isn't recent enough, or if we have to apply patches that haven't yet
+       beenaccepted upstream.
+
+``--download-tools=never``
+        Never download and install autotools; always use your installed
+        versions.
+
+        Note that in this case the build may fail if you have out of date
+        versions of the tools, and you may also fall foul of behaviour fixed
+        in our patches.
+
+You can also asl the build system to delete the downloaded and installed
+versions by passing ``--clean``.
 
 Our bootstrap script will check which directories you have checked out,
 so you can bootstrap a partial tree.  You can also ``touch .nobootstrap`` in
-a subdirectory to tell bootstrap to ignore it.
+a subdirectory to tell bootstrap to ignore it, or you can pass just the
+directories you want to build as arguments to ``bootstrap``.
 
 If you need to add any extra macro directories to the path searched by aclocal
 (which is part of automake), you can do this by specifying these in the
