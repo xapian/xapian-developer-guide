@@ -170,6 +170,47 @@ that are easy for others to read.
 * Avoid committing code that has been commented out. If we need it
   again, it's in the git history.
 
+Why the "size" of commits matters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We said above that you should only make one change per commit. This is for a few
+reasons.
+
+* The most important is that if a change later turns out to be unhelpful for
+  whatever reason, git provides a tool (called "`revert <git revert>`_") for
+  creating a new commit that "undoes" a previous one. If the original commit did
+  more than one thing, then those changes needs to be untangled in order to
+  revert. That takes more time, and increases the chance that someone will
+  make mistakes when undoing the previous changes.
+
+  .. note:: You can use ``git revert`` with squash and fixup commits
+
+     The trick is to run ``git revert -n``. ``-n`` means that git will revert
+     the changes in your working tree and index, but not make a commit out of
+     them. You can then use ``git commit --fixup`` or similar as usual.
+
+     You can also revert several different commits as one commit this way.
+
+* Where it makes sense, we like to apply fixes and smaller improvements to the
+  current release series of Xapian. Some larger improvements, including
+  completely new features, are generally not suitable for this, so if you make a
+  commit which say fixes a bug and adds a new method to one of our core classes,
+  it makes it harder to "backport" just the bug fix. If you separate that into
+  two commits, we can use a git tool called "`cherry picking <git cherry
+  pick_>`_" to pull just the bugfix commit in for the next stable release.
+
+  In fact, with separate commits, it's easier to spot candidates for backporting
+  in the first place.
+
+* In a similar vein, some changes that aren't pulled into a release series may
+  be of interest to someone else who doesn't want to, or cannot, use the
+  "bleeding edge" git master. With separate commits, they can use the patches
+  for just the functionality they are looking for. This can be particularly
+  useful for people packaging Xapian for various operating system distributions.
+
+.. _git cherry pick: https://git-scm.com/docs/git-cherry-pick
+.. _git revert: https://git-scm.com/docs/git-revert
+
 Good commit messages
 ~~~~~~~~~~~~~~~~~~~~
 
