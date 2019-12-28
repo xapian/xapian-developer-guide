@@ -31,4 +31,5 @@ to get more deeply involved in writing code for Xapian.
    new-contributors
    workflow
    contributing-changes
+   new-bindings
    helpful-tips

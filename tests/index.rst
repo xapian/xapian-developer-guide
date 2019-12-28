@@ -20,3 +20,4 @@ Generally, tests for any part of Xapian can be run using ``make check``.
    writing
    debugging
    omega
+   bindings
