@@ -324,14 +324,15 @@ the following may be of use.
 ``--enable-maintainer-mode``
 	This tells configure to enable make dependencies for
 	regenerating build system files (such as ``configure``,
-	``Makefile.in``, and ``Makefile``) and other generated files (such as
-	the stemmers and query parser) when required.  These are
-	disabled by default as some make programs try to rebuild them
-	when it's not appropriate (e.g. BSD make doesn't handle VPATH
-	except for implicit rules).  For this reason, we recommend GNU
-	make if you enable maintainer mode.
+	``Makefile.in``, and ``Makefile``) and other generated files
+        when required.  These are disabled by default as some make
+        programs try to rebuild them when it's not appropriate
+        (e.g. BSD make doesn't handle VPATH except for implicit
+        rules).  For this reason, we recommend GNU make if you enable
+        maintainer mode.
 
-        You'll also need a non-cross-compiling C compiler for
+        For ``xapian-core``, generated files include the stemmers
+        and query parser; you'll need a non-cross-compiling C compiler for
 	compiling the Lemon parser generator and the Snowball stemming
 	algorithm compiler.  The configure script will attempt to
 	locate one, but you can override this autodetection by passing
