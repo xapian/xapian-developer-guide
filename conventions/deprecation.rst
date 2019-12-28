@@ -73,27 +73,35 @@ Currently we don't have an equivalent of the C++ ``XAPIAN_DEPRECATED()`` macro
 for the bindings, but it would be good to have.  Here are some notes on how
 this could be achieved for various languages we support:
 
-* PHP now has a E_USER_DEPRECATED error level - in a deprecated method we
-  could do::
+* PHP now has a ``E_USER_DEPRECATED`` error level - in a deprecated method we
+  could do:
 
-      trigger_error(
-          'World::hi() is deprecated, use World::hello() instead',
-          XAPIAN_DEPRECATED
-      );
+  .. code-block:: php
 
-* Python has DeprecationWarning, which we were using in 1.2.x a bit::
+     trigger_error(
+         'World::hi() is deprecated, use World::hello() instead',
+         XAPIAN_DEPRECATED
+     );
 
-      warnings.warn(
-          'World::hi() is deprecated, use World::hello() instead',
-          DeprecationWarning,
-      )
+* Python has ``DeprecationWarning``, which we were using in 1.2.x a bit:
+
+  .. code-block:: python
+
+     warnings.warn(
+         'World::hi() is deprecated, use World::hello() instead',
+         DeprecationWarning,
+     )
 
 * Ruby - there are external libraries to handle deprecation warnings, but the
-  simplest option without external dependencies seems to be::
+  simplest option without external dependencies seems to be:
 
-      warn '[DEPRECATION] 'World::hi() is deprecated, use World::hello() instead')
+  .. code-block:: ruby
 
-* Perl::
+     warn "[DEPRECATION] World::hi() is deprecated, use World::hello() instead"
+
+* Perl:
+
+  .. code-block:: perl
 
      use warnings;
      warnings::warnif('deprecated', 'World::hi() is deprecated, use World::hello() instead');
