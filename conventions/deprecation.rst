@@ -106,7 +106,11 @@ this could be achieved for various languages we support:
      use warnings;
      warnings::warnif('deprecated', 'World::hi() is deprecated, use World::hello() instead');
 
-* Java has ``@Deprecated``, but I think that's a documentation thing only.
+* Java has an annotation, ``@Deprecated``, which `can be used to indicate
+  deprecation <java deprecation_>`_.
+
+.. _java deprecation: https://docs.oracle.com/javase/7/docs/technotes/guides/javadoc/deprecation/deprecation.html#annotation
+
 
 It would be great (but probably hard) to reuse the ``XAPIAN_DEPRECATION()``
 markers.  Perhaps parsing the doxygen XML for ``@deprecated`` markers would
