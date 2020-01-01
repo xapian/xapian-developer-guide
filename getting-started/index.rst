@@ -196,7 +196,7 @@ with the ``--download-tools`` option to ``bootstrap``:
 ``--download-tools=ifneeded`` (the default)
        Download, patch and install autotools only if your installed version
        isn't recent enough, or if we have to apply patches that haven't yet
-       beenaccepted upstream.
+       been accepted upstream.
 
 ``--download-tools=never``
         Never download and install autotools; always use your installed
@@ -206,7 +206,7 @@ with the ``--download-tools`` option to ``bootstrap``:
         versions of the tools, and you may also fall foul of behaviour fixed
         in our patches.
 
-You can also asl the build system to delete the downloaded and installed
+You can also ask the build system to delete the downloaded and installed
 versions by passing ``--clean``.
 
 Our bootstrap script will check which directories you have checked out,
