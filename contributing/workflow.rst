@@ -173,7 +173,7 @@ that are easy for others to read.
 Why the "size" of commits matters
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We said about that you should only make one change per commit. This is for a few
+We said above that you should only make one change per commit. This is for a few
 reasons.
 
 * The most important is that if a change later turns out to be unhelpful for
