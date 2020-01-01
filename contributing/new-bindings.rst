@@ -8,8 +8,8 @@ We'd like Xapian to be usable from as many languages as possible. However,
 this means more than just having bindings code. To truly support a language,
 we need to have:
 
-* working bindings that can be built against a latest version of Xapian and the
-  latest version of the target language
+* working bindings that can be built against a recent release of Xapian or git
+  master, as well as against the latest version of the target language
 
 * documentation to help people familiar with the target language to start using
   the bindings
@@ -19,7 +19,8 @@ we need to have:
   languages.
 
 * automated tests for the bindings; at least a "smoketest" hooked into the tests
-  for the build system, so we'll notice
+  for the build system, so we'll notice if something significant breaks. See
+  :ref:`the section on testing bindings <testing-bindings>`.
 
 .. _Xapian user guide: https://getting-started-with-xapian.readthedocs.io/en/latest/
 
@@ -62,11 +63,6 @@ Go
 
 Ocaml
 	Dan Colish did `some initial work on Ocaml support <ocaml_>`_.
-
-
-Guile
-	rm@fabula.de did some work on getting Guile bindings working, but sadly
-	most of this was lost when his laptop's hard disk died.
 
 Pike
 	Bill Welliver has written some `Pike bindings for Xapian <pike_>`_ covering
