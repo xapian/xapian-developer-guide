@@ -223,8 +223,8 @@ you!
 * Start with a short (50 characters) summary line.
 
   git (and github) are designed to work better this way. The summary
-  should be in the imperative ("Fix bug on OS X" rather than "Fixed
-  bug on OS X"). This matches git's automatic messages around
+  should be in the imperative ("Fix bug on macOS" rather than "Fixed
+  bug on macOS"). This matches git's automatic messages around
   merges, reverts and so on.
 
 * Follow that with more detail as needed, wrapping long lines at

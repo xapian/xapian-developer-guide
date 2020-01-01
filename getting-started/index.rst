@@ -6,7 +6,7 @@ Getting started
 .. note::
 
    Currently this guide is written assuming you are either developing
-   on something like Unix (probably either Linux or OS X). You can use
+   on something like Unix (probably either Linux or macOS). You can use
    software such as `Virtual Box <https://www.virtualbox.org/>`_ to run
    a 'virtual' Linux machine on another operating system; in this case
    we recommend using the most recent `Ubuntu LTS
@@ -54,15 +54,15 @@ all the necessary tools and libraries:
      python3-sphinx mono-devel openjdk-8-jdk lua5.2 liblua5.2-dev \
      php-dev php-cli python-dev python3-dev ruby-dev tcl-dev texinfo
 
-OS X
-~~~~
+macOS
+~~~~~
 
 You need to install Apple's XCode tools, which contain their compiler,
 debugger and various other tools. You can do that from within the
 AppStore.
 
 We recommend using `homebrew <https://brew.sh/>`_ to install and manage
-additional libraries and tools on OS X. Once you've installed XCode
+additional libraries and tools on macOS. Once you've installed XCode
 and homebrew, you can get all the dependencies you need for Xapian
 using:
 
@@ -262,7 +262,7 @@ all its defaults:
 
    $ ./configure
 
-Note that on OS X you probably want to turn off the Perl and TCL8
+Note that on macOS you probably want to turn off the Perl and TCL8
 bindings when developing, as there are some complexities when
 developing against the system versions, and the homebrew versions are
 slightly awkward:
@@ -296,7 +296,7 @@ Building Xapian is just a matter of typing:
 First it will build xapian-core, the core library. Then it will build
 Omega and the language bindings, using the version of xapian-core
 you've just built, but not yet installed. (This is the bit that causes
-some problems on OS X if you use system versions of any of the
+some problems on macOS if you use system versions of any of the
 languages.)
 
 Running the tests

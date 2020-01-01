@@ -90,10 +90,10 @@ Contents
    install everything and not explain what's going on. So we
    might want to include the details somewhere.
 
-   There needs to be a section about OS X and bindings, somewhere.
+   There needs to be a section about macOS and bindings, somewhere.
 
    build-system/index [ configure options ]
    tests/index [ eatmydata, debugging, valgrind, make targets, running individual tests, lldb/gdb, gprof/purify/insure/lcov, data -> db indexing (tests/testdata & code in tests/harness/)), where the dbs live (eg tests/.glass) ]
    releases/index [how to make a release, Debian packages]
 
-.. todo:: There needs to be a section about OS X and bindings, somewhere.
+.. todo:: There needs to be a section about macOS and bindings, somewhere.
