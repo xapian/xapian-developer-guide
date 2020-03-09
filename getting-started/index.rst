@@ -28,7 +28,7 @@ copy of everything first:
 
 .. code-block:: bash
 
-   $ git clone git://git.xapian.org/xapian
+   $ git clone https://git.xapian.org/xapian
    $ cd xapian
 
 This will 'clone' a complete copy of the Xapian source code, including
