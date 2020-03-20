@@ -1,6 +1,35 @@
 Writing library tests
 =====================
 
+.. note:: Generally we don't "unit test" the lower levels of Xapian
+
+   A common convention in a lot of software is to write `unit tests`_,
+   testing individual units of source code. In Xapian we generally
+   do not test the lower levels separately. Instead, we write tests
+   that use Xapian's public API.
+
+   So for instance, we don't write unit tests for our ``::Internal``
+   classes. So if you make a change to :class:`Xapian::Weight::Internal`
+   you wouldn't write a test for that change directly. However, your
+   changes are motivated by a desire to add certain behaviour to the
+   library. This generally will be new functionality via the API, which
+   you can write a test for. Sometimes it will be what is sometimes
+   called "`non-functional behaviour`_", such as speed of operation or
+   memory usage. These may be harder to write tests for, and are
+   worth :ref:`discussing with other members of the community <contact>`
+   to figure out the best way to test them.
+
+   This means that our tests are often testing a more complex bundle of
+   functionality than you may be used to from unit tests. You can think
+   of most of Xapian's test suite as automated `functional tests`_.
+
+.. _unit tests:
+   https://en.wikipedia.org/wiki/Unit_testing
+.. _functional tests:
+   https://en.wikipedia.org/wiki/Functional_testing
+.. _non-functional behaviour:
+   https://en.wikipedia.org/wiki/Non-functional_requirement
+
 Test programs live in ``tests/``. They mostly use a standard test
 harness, in ``tests/harness/``, which wraps each test, reports results,
 and generally packages things up nicely. The test harness counts how
