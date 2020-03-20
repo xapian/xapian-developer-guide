@@ -21,7 +21,7 @@ depending what facilities each backend supports. A lot of the work is
 done by macros and helper functions, which may make it hard to work out
 quite what is going on, but make life easier once you've grasped what's
 going on. The ``main()`` function and other bits are in ``apitest.cc``,
-and tests themselves are in various other C++ files starting api\_. Each
+and tests themselves are in various other C++ files starting ``api_``. Each
 one of these has its own tables for various different groups of tests
 (eg: ``api_db.cc``, which performs tests on the API that require a
 database backend, has basic tests, a few specialised groups that only
@@ -45,7 +45,7 @@ You'll notice in ``apitest.cc`` that it runs all appropriate test groups
 against each backend that is being built. The backends are inmemory,
 multi, glass, honey, remoteprog and remotetcp. If you need to
 create a new test group with different requirements to any current ones,
-put it in the appropriate api\_ file (or create a new one, and add it
+put it in the appropriate ``api_`` file (or create a new one, and add it
 into Makefile.am) and remember to add the group to all pertinent
 backends in ``apitest.cc``.
 
@@ -105,7 +105,7 @@ You can also get an empty writable database, giving it a name:
    Xapian::WritableDatabase db(get_named_writable_database("testdbname"));
 
 The actual database files are generally put into ``tests/.<dbtype>``
-using either the name (for `get_named_writable_database()` or the
+using either the name (for ``get_named_writable_database()`` or the
 dataset(s) used. So you can end up with database paths such as::
 
   tests/.glass/db__apitest_allterms
