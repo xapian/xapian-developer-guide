@@ -15,6 +15,41 @@ top), a table of tests (at the bottom), and a tiny main which sets the
 test harness in motion. It uses the table to figure out what the tests
 are called, and what function to call to run them.
 
+Incidentally, when fixing bugs, it's often better to write the test
+before fixing the bug. Firstly, it's easier to assure yourself that the
+bug is (a) genuine, and (b) fixed, because you see the test go from fail
+to pass (though sometimes you don't get the testcase quite right, so
+this isn't doesn't always work as well as it should). Secondly you're
+more likely to write the test carefully, because once you've fixed
+something there's often a feeling that you should commit it for the good
+of the world, which tends to distract you.
+
+The framework is done for you, so you don't need to worry about that
+much. You are responsible for doing two things:
+
+* writing a minimal test or tests for the feature
+* adding that test to the list of tests to be run
+
+Adding the test is simple. There's a ``test_desc`` array in each file that
+comprises a set of tests (I'll come to that in a minute), and you just
+add another entry. The entry is an array consisting of a name for the
+test and a pointer to the function that is the test. Easy. The procedure
+is even simpler for apitest tests - there you just use ``DEFINE_TESTCASE``
+to define your new testcase, and a script picks it up and makes sure it
+is run.
+
+Look at the bottom of ``tests/stemtest.cc`` for the ``test_desc`` array.
+Now look up about 20 lines to where the test functions are defined. You
+need to write a function like these which will return true or false
+depending on whether it failed or not.
+
+In addition, there are a bunch of macros to help you perform standards
+testing tasks. Things like ``TEST_EQUAL`` are all in
+``tests/harness/testsuite.h``. They're pretty simple to use.
+
+API tests
+---------
+
 The most important test system for most people will be ``apitest``. This
 also uses the test harness, but has several tables of tests to be run
 depending what facilities each backend supports. A lot of the work is
@@ -48,38 +83,6 @@ create a new test group with different requirements to any current ones,
 put it in the appropriate ``api_`` file (or create a new one, and add it
 into Makefile.am) and remember to add the group to all pertinent
 backends in ``apitest.cc``.
-
-Incidentally, when fixing bugs, it's often better to write the test
-before fixing the bug. Firstly, it's easier to assure yourself that the
-bug is (a) genuine, and (b) fixed, because you see the test go from fail
-to pass (though sometimes you don't get the testcase quite right, so
-this isn't doesn't always work as well as it should). Secondly you're
-more likely to write the test carefully, because once you've fixed
-something there's often a feeling that you should commit it for the good
-of the world, which tends to distract you.
-
-The framework is done for you, so you don't need to worry about that
-much. You are responsible for doing two things:
-
-* writing a minimal test or tests for the feature
-* adding that test to the list of tests to be run
-
-Adding the test is simple. There's a test\_desc array in each file that
-comprises a set of tests (I'll come to that in a minute), and you just
-add another entry. The entry is an array consisting of a name for the
-test and a pointer to the function that is the test. Easy. The procedure
-is even simpler for apitest tests - there you just use DEFINE\_TESTCASE
-to define your new testcase, and a script picks it up and makes sure it
-is run.
-
-Look at the bottom of ``tests/stemtest.cc`` for the test\_desc array.
-Now look up about 20 lines to where the test functions are defined. You
-need to write a function like these which will return true or false
-depending on whether it failed or not.
-
-In addition, there are a bunch of macros to help you perform standards
-testing tasks. Things like TEST\_EQUAL are all in
-``tests/harness/testsuite.h``. They're pretty simple to use.
 
 Test databases
 --------------
