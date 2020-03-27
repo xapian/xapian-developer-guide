@@ -69,11 +69,8 @@ is run.
 
 Look at the bottom of ``tests/stemtest.cc`` for the ``test_desc`` array.
 Now look up about 20 lines to where the test functions are defined. You
-need to write a function like these which will return true or false
-depending on whether it failed or not.
-
-In addition, there are a bunch of macros to help you perform standards
-testing tasks. Things like ``TEST_EQUAL`` are all in
+need to write a function like these.  There are a bunch of macros to help you
+perform standards testing tasks, such as ``TEST_EQUAL``, which are all in
 ``tests/harness/testsuite.h``. They're pretty simple to use.
 
 API tests
