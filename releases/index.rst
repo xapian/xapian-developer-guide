@@ -3,7 +3,8 @@ Making a release of Xapian
 
 This is a (hopefully complete) list of the jobs which need doing:
 
-* Email Fabrice Colin and Tim Brody so they can check RPM packaging.
+* If there are changes which are likely to affect the RPM packaging, email
+  Fabrice Colin and Tim Brody so they can check it.
 
 * Check if `config/config.guess` and `config/config.sub` need updating to
   more recent versions from https://git.savannah.gnu.org/gitweb/?p=config.git
@@ -52,7 +53,7 @@ This is a (hopefully complete) list of the jobs which need doing:
 * Update the website: ``generate`` in the ``www.xapian.org`` git repo
   contains the latest version and the date it was released.
 
-* Run ``/home/olly/tmp/xapian-website-update/update_website.sh``
+* Run ``./update_website`` in the cloned repo on the webserver.
 
 * Announce the new version on xapian-discuss
 
