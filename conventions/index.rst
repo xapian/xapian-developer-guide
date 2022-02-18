@@ -7,14 +7,14 @@ We aim for Xapian to be:
 
 * *Cross-platform*: this means it will compile and run on a range of
   different platforms. We have three sets of automated build systems
-  to help us keep track of this: `the Xapian buildbots`_, our `builds
-  on Travis CI`_, and finally `builds on AppVeyor`_. The last two will
-  be triggered automatically if you submit changes using :ref:`a pull
-  request on github <pull requests>`.
+  to help us keep track of this: `the Xapian buildbots`_ (currently
+  offline), our `builds on Github Actions`_, and finally `builds on AppVeyor`_.
+  The last two will be triggered automatically if you submit changes using
+  :ref:`a pull request on github <pull requests>`.
 
 .. _the Xapian buildbots: https://buildbot.xapian.org/
 
-.. _builds on Travis CI: https://travis-ci.org/xapian
+.. _builds on Github Actions: https://github.com/xapian/xapian/actions
 
 .. _builds on AppVeyor: https://ci.appveyor.com/project/ojwb/xapian
 
