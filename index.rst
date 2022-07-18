@@ -47,8 +47,8 @@ contributors<advice for new contributors>`.
 Getting in touch
 ----------------
 
-The Xapian community typically works "in the open", via mailing lists and an
-IRC channel:
+The Xapian community typically works "in the open", via mailing lists and a
+chat channel:
 
 * Our `mailing lists <https://xapian.org/lists>`_ are open for anyone to
   join, although (because we don't want to relay spam to everyone) if you
@@ -56,12 +56,11 @@ IRC channel:
   message. Please be patient and don't resend a message just because it
   doesn't appear right away.
 
-* We're on `#xapian <https://webchat.freenode.net/?channels=%23xapian>`_ on
-  ``irc.freenode.net``. IRC is a simple text chat system where many members
-  of the community hang out; although because we're distributed around the
-  world, you may not get an instant response. That doesn't mean we're
-  ignoring you, so either hang on for a reply, or you can use the mailing
-  list instead.
+* We're on `#xapian <https://kiwiirc.com/client/irc.libera.chat/#xapian>`_ on
+  ``irc.libera.chat``, which is bridged to the matrix room #xapian:matrix.org.
+  Note that because we're distributed around the world you may not get an
+  instant response. That doesn't mean we're ignoring you, so either hang on for
+  a reply, or you can use the mailing list instead.
 
 .. This would be a good place to talk about a CoC.
 
