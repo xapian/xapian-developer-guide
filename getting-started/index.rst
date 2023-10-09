@@ -149,7 +149,7 @@ and setting up the build system for you.
 
 .. note::
 
-   One things that bootstrap does is to set up a top-level ``configure`` script
+   One thing that bootstrap does is to set up a top-level ``configure`` script
    which ensures that the in-tree version of ``xapian-core`` is built first and
    then used for building everything else. You almost certainly want to build
    Xapian this way.
