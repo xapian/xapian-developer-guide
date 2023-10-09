@@ -48,11 +48,11 @@ all the necessary tools and libraries:
 
 .. code-block:: bash
 
-   $ apt-get install build-essential m4 perl python zlib1g-dev uuid-dev \
+   $ apt-get install build-essential m4 perl python3 zlib1g-dev uuid-dev \
      wget bison tcl libpcre3-dev libmagic-dev valgrind ccache eatmydata \
-     doxygen graphviz help2man python-docutils pngcrush python-sphinx \
-     python3-sphinx mono-devel default-jdk lua5.3 liblua5.3-dev \
-     php-dev php-cli python-dev python3-dev ruby-dev tcl-dev texinfo
+     doxygen graphviz help2man pngcrush python3-docutils python3-sphinx \
+     mono-devel default-jdk lua5.3 liblua5.3-dev php-cli php-dev \
+     python3-dev ruby-dev tcl-dev texinfo
 
 macOS
 ~~~~~
@@ -69,14 +69,10 @@ using:
 .. code-block:: bash
 
    $ brew install libmagic pcre \
-     lua mono perl php python python3 ruby tcl-tk \
+     lua mono perl php python3 ruby tcl-tk \
      doxygen help2man graphviz pngcrush
    # and some python-specific documentation tools
-   $ pip install sphinx docutils
-   $ pip3 install sphinx
-
-(We install documentation tools for both python2 and python3, in the
-same way we build the bindings for both of them.)
+   $ pip3 install sphinx docutils
 
 Windows
 ~~~~~~~
@@ -105,7 +101,7 @@ You will need the following tools installed to build from git:
 
 * GNU m4 >= 4.6 (for autoconf)
 * perl >= 5.6 (for automake; also for various maintainer scripts)
-* python >= 2.3 (for generating the Python bindings)
+* python >= 3.3 (for generating the Python bindings)
 * GNU make (or another make which support VPATH for explicit rules)
 * GNU bison (for building SWIG, used for generating the bindings)
 * Tcl (to generate unicode/unicode-data.cc)
