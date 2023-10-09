@@ -111,7 +111,7 @@ development headers:
 
 * `zlib <https://zlib.net>`_
 * `libuuid <https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/tree/libuuid>`_
-* `PCRE <https://www.pcre.org>`_
+* `PCRE2 <https://www.pcre.org>`_
 * libmagic (which is part of `the open source implementation of file(1) <https://www.darwinsys.com/file/>`_)
 
 .. On Fedora, yum install libuuid-devel -- can we get a more complete list?
