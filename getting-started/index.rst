@@ -109,7 +109,7 @@ You will need the following tools installed to build from git:
 There are also a number of libraries you'll need available, including
 development headers:
 
-* `zlib1g <https://zlib.net>`_
+* `zlib <https://zlib.net>`_
 * `libuuid <https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/tree/libuuid>`_
 * `PCRE <https://www.pcre.org>`_
 * libmagic (which is part of `the open source implementation of file(1) <https://www.darwinsys.com/file/>`_)
