@@ -52,7 +52,7 @@ all the necessary tools and libraries:
      wget bison tcl libpcre3-dev libmagic-dev valgrind ccache eatmydata \
      doxygen graphviz help2man pngcrush python3-docutils python3-sphinx \
      mono-devel default-jdk lua5.3 liblua5.3-dev php-cli php-dev \
-     python3-dev ruby-dev tcl-dev texinfo
+     python3-dev ruby-dev tcl-dev texinfo pkg-config
 
 macOS
 ~~~~~
