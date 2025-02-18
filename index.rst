@@ -56,8 +56,7 @@ chat channel:
   message. Please be patient and don't resend a message just because it
   doesn't appear right away.
 
-* We're on `#xapian <https://kiwiirc.com/client/irc.libera.chat/#xapian>`_ on
-  ``irc.libera.chat``, which is bridged to the matrix room #xapian:matrix.org.
+* We're on Matrix - the room name is #xapian:matrix.org.
   Note that because we're distributed around the world you may not get an
   instant response. That doesn't mean we're ignoring you, so either hang on for
   a reply, or you can use the mailing list instead.

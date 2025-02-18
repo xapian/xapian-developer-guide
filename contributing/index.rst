@@ -9,7 +9,7 @@ Xapian is an open source project, depending on a community of volunteers. There 
 
  * Talk or write about Xapian. By explaining how you've used Xapian you not only help spread the word, but also might learn more about Xapian itself.
 
- * Let us know (either `via our bug tracker <https://trac.xapian.org/newticket>`_ or by the mailing lists or IRC) if you run into any problems with our documentation, or with bugs you come across while using Xapian.
+ * Let us know (either `via our bug tracker <https://trac.xapian.org/newticket>`_ or by the mailing lists or the Matrix chatroom) if you run into any problems with our documentation, or with bugs you come across while using Xapian.
 
  * Help improve our documentation, either by suggesting changes or by writing up something on our list of `missing documentation <https://trac.xapian.org/wiki/MissingDocumentation>`_.
 

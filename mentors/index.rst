@@ -70,12 +70,12 @@ latest LTS (long-term support) release of Ubuntu.
    issues -- but when it comes to helping someone else, you need to be
    sure you know exactly what they've done.
 
-   A lot of our project communication happens on IRC, and it's
+   A lot of our project communication happens in the Matrix chatroom, and it's
    difficult to read long outputs of commands such as ``make``
    there. It's helpful to have people copy anything substantial into
    something like `Pastebin <https://pastebin.com/>`_ or
    `Gist <https://gist.github.com/>`_ and then provide a link in
-   IRC. This can be used for command output, or for the contents of
+   chat. This can be used for command output, or for the contents of
    files such as ``config.log``.
 
 
@@ -201,7 +201,7 @@ should! -- help any students you can during the summer. Where
 possible, we expect mentors to find time every week to engage with
 Xapian and our Summer of Code students. Here are some ways to do that.
 
-Answer questions on the mailing list and IRC
+Answer questions on the mailing list and chat
 
   It's demotivating to ask a question and get no reply. Sometimes even
   just a response that says you don't know can help reassure a new

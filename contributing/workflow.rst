@@ -19,8 +19,8 @@ tickets.)
 To 'claim' the ticket so others know you're working on it, you can
 either reassign the ticket to yourself and then claim it, or you can
 just add a comment saying you're working on it. If you haven't already
-done so, now's a good time to drop a message either in IRC or to the
-mailing list saying what you'l be working on.
+done so, now's a good time to drop a message either in the Matrix chatroom
+or to the mailing list saying what you'll be working on.
 
 .. note::
 

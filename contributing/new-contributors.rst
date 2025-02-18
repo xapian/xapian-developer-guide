@@ -108,7 +108,7 @@ It can be difficult sometimes to find a place to start, so here are some suggest
 
 * Don't be afraid to :ref:`ask for help <contact>`.
 
-  Please pop onto the mailing list or IRC if you need any help in
+  Please pop onto the mailing list or Matrix chatroom if you need any help in
   getting started or picking something to work on.
 
 Do some work

@@ -11,5 +11,5 @@ to install the python package directly.
 
 With that installed, you can then build the HTML output by running `make html`.
 
-You can chat to us on matrix, IRC or via our mailing lists.  Links to
-all of these are [on our website](https://xapian.org/lists).
+You can chat to us on matrix or via our mailing lists.  Links to
+these are [on our website](https://xapian.org/lists).
