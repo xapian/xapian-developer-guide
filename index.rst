@@ -72,6 +72,7 @@ Contents
    getting-started/index
    conventions/index
    documentation/index
+   design/index
    tests/index
    contributing/index
    mentors/index
