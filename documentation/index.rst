@@ -15,12 +15,15 @@ There are a number of types of documentation available for Xapian.
    and as `a git repo on Github`_ which
    you can build for a range of different languages.
    
-2. API documentation, which is built from specially-formatted comments
-   in Xapian's C++ header files. This allows people writing code that
+2. `Public API documentation`_, which is built from specially-formatted
+   comments in Xapian's C++ header files. This allows people writing code that
    uses Xapian to check on details of the classes and methods they are
    using, as well as to explore what features there are in Xapian.
 
-3. Developer documentation, for people who want to
+3. `Internal source API documentation`_.  This is similar to the public API
+   documentation, but covers internal APIs used inside xapian-core.
+
+4. Developer documentation, for people who want to
    contribute directly to Xapian.
    `This guide`_ is part of that
    (and is also `available on github`_).
@@ -31,7 +34,7 @@ There are a number of types of documentation available for Xapian.
    to the developer guide. (Some is also being migrated to the user
    guide.)
 
-4. `The Xapian wiki`_ also contains information, including links
+5. `The Xapian wiki`_ also contains information, including links
    to articles and talks that people have written about using Xapian
    in various ways. Although this isn't always official Xapian
    documentation, it may be helpful. Some of it may now be quite out
@@ -40,11 +43,11 @@ There are a number of types of documentation available for Xapian.
    how to change the advice or code you find to work with a recent
    version of Xapian.
 
-5. Omega, a standalone indexing and web search tool built using
+6. Omega, a standalone indexing and web search tool built using
    Xapian, has its own documentation bundled with its source code,
    and `available on our website`_.
 
-6. The language bindings,
+7. The language bindings,
    which allow you to use Xapian from programming languages others than C++,
    have `their own documentation`_
    which mostly focusses on ways that
@@ -52,6 +55,8 @@ There are a number of types of documentation available for Xapian.
    
 .. _online: https://getting-started-with-xapian.readthedocs.org/
 .. _a git repo on Github: https://github.com/xapian/xapian-docsprint/
+.. _Public API documentation: https://xapian.org/docs/apidoc/html/annotated.html
+.. _Internal source API documentation: https://xapian.org/docs/sourcedoc/html/annotated.html
 .. _This guide: https://xapian-developer-guide.readthedocs.org/
 .. _available on github: https://github.com/xapian/xapian-developer-guide/
 .. _The Xapian wiki: https://trac.xapian.org/wiki
