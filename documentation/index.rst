@@ -28,12 +28,6 @@ There are a number of types of documentation available for Xapian.
    `This guide`_ is part of that
    (and is also `available on github`_).
 
-   There is also some developer documentation available elsewhere,
-   particularly in the main Xapian source repository -- look in
-   particular in ``xapian-core/docs``. Some of this is being migrated
-   to the developer guide. (Some is also being migrated to the user
-   guide.)
-
 5. `The Xapian wiki`_ also contains information, including links
    to articles and talks that people have written about using Xapian
    in various ways. Although this isn't always official Xapian
