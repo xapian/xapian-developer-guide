@@ -1,9 +1,9 @@
 .. Copyright (C) 2008 Lemur Consulting Ltd
 .. Copyright (C) 2010,2014,2019 Olly Betts
 
-====================================
-Xapian Database Replication Protocol
-====================================
+=============================
+Database Replication Protocol
+=============================
 
 .. contents:: Table of contents
 
