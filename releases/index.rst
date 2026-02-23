@@ -3,9 +3,6 @@ Making a release of Xapian
 
 This is a (hopefully complete) list of the jobs which need doing:
 
-* If there are changes which are likely to affect the RPM packaging, email
-  Fabrice Colin and Tim Brody so they can check it.
-
 * Check if `config/config.guess` and `config/config.sub` need updating to
   more recent versions from https://git.savannah.gnu.org/gitweb/?p=config.git
 
