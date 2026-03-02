@@ -235,14 +235,14 @@ Efficient use of ``std::string``
 Use of C++ Features
 ~~~~~~~~~~~~~~~~~~~
 
-C++11
+C++17
 -----
 
-As of Xapian 1.3.3, a compiler with decent support for C++11 is
-required to build Xapian.  We currently aim to allow users to use a
-non-C++11 compiler to build code which uses Xapian.
+As of Xapian 2.0.0, a compiler with decent support for C++17 is
+required to build Xapian.  C++ code that includes Xapian headers
+also needs to be built as C++17 or higher.
 
-There are now several compilers with good C++11 support, but there are
+There are now several compilers with good C++17 support, but there are
 a few shortfalls in commonly deployed versions of most of them.  Often
 we can work around this, and we should do where the effort is low
 compared to the gain (so a compiler version which is widely used is
@@ -252,13 +252,14 @@ However, we shouldn't have to jump through hoops to cater for
 compilers where their authors aren't putting in the effort to keep up
 with the language standards.
 
-Please avoid the following C++11 features for the time being:
+Please avoid the following newer C++ features:
 
-* ``std::to_string()`` - this is completely missing on current
-  versions of mingw and cygwin - in the library, you can ``#include
-  "str.h"`` and then use the ``str()`` function instead for most
-  cases.  This is also usually faster than ``std::to_string()``.
-
+* (C++11) ``std::to_string()`` - this was completely missing on mingw and
+  cygwin (current status unknown), but ``std::to_string()`` uses
+  the current locale whereas we usually don't want that.  In the library,
+  you can ``#include "str.h"`` and then use the ``str()`` function
+  instead for most cases.  This is also usually faster than
+  ``std::to_string()``.
 
 C++ features we assume
 ----------------------
