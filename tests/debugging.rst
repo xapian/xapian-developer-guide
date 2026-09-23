@@ -158,9 +158,7 @@ See `lcov.xapian.org <http://lcov.xapian.org/>`_ for automatically generated
 reports for git main.
 
 If you use ccache, you'll need ccache >= 3.2.2 for coverage builds to actually
-be cached.  Since ccache 3.0 (released 2010-06-20) coverage builds are
-supported, but initially by disabling caching if the coverage options are used.
-See below for a workaround for ccache < 3.0.
+be cached (released 2015-05-10 so should be easily available everywhere).
 
 There are three make targets (currently supported in the ``xapian-core`` and
 ``xapian-letor`` directories):
@@ -176,11 +174,6 @@ There are three make targets (currently supported in the ``xapian-core`` and
   * To configure ``xapian-letor`` to use the in-tree ``xapian-core`` use::
 
       make coverage-reconfigure COVERAGE_CONFIGURE_ARGS=XAPIAN_CONFIG="`pwd`/../xapian-core/xapian-config
-
-  * If you're using ccache < 3.0 this doesn't support coverage builds.  To
-    work around this you can disable use of ccache with::
-
-      make coverage-reconfigure COVERAGE_CONFIGURE_ARGS=CCACHE_DISABLE=1
 
   * On older systems, coverage reports don't seem to work with shared
     libraries.  To work around this disable use of shared libraries with::
