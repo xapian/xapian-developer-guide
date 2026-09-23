@@ -152,9 +152,7 @@ To use Insure (another proprietary tool):
 Using lcov
 ~~~~~~~~~~
 
-You can use lcov (at least version 1.10) to generate a test coverage report.
-You ideally want lcov 1.11 or later, since 1.11 includes patches to reduce
-memory usage significantly - lcov 1.10 would run out of memory in a 1GB VM.
+You can use lcov (at least version 2.0) to generate a test coverage report.
 
 See `lcov.xapian.org <http://lcov.xapian.org/>`_ for automatically generated
 reports for git main.
