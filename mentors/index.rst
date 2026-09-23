@@ -161,10 +161,10 @@ Pull requests where the automated tests aren't passing
 
   .. code-block:: bash
 
-     git diff master..HEAD | xapian-maintainer-tools/xapian-check-patch
+     git diff main..HEAD | xapian-maintainer-tools/xapian-check-patch
 
   (The ``git diff`` command there will output the changes in your
-  local commits compared to the "master" branch.)
+  local commits compared to the "main" branch.)
 
 Not following our :ref:`coding conventions <conventions>`
 

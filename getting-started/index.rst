@@ -127,7 +127,7 @@ If you want to be able to build distribution tarballs (with ``make dist``) then
 you'll also need some further tools:
 
 * doxygen (v1.8.8 is used for 1.3.x snapshots and releases; 1.7.6.1 fails to
-  process git master after ``PL2Weight`` was added).
+  process git main after ``PL2Weight`` was added).
 * dot (part of Graphviz.  Doxygen's ``DOT_MULTI_TARGETS`` option apparently needs
   ">1.8.10")
 * help2man
@@ -142,7 +142,7 @@ Building Xapian
 Bootstrapping the code
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The easiest way of building Xapian from git master is to use our bootstrap
+The easiest way of building Xapian from git main is to use our bootstrap
 script. It takes care of a number of things which are otherwise fiddly to get
 right, including checking you have the right version of various tools we use,
 and setting up the build system for you.
@@ -157,7 +157,7 @@ and setting up the build system for you.
    Not using this means you have to check by hand that you're building other
    subdirectories against the in-tree core library, as by default they will pick
    any installed copy. An installed copy of Xapian is likely to be a different
-   version to the source tree you are building. Building the git master version
+   version to the source tree you are building. Building the git main version
    of Xapian against an earlier released library will probably fail. If you're
    working on Xapian then you almost certainly want to build everything against
    the in-tree version, so you should use ``bootstrap`` and the ``configure``

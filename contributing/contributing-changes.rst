@@ -70,11 +70,11 @@ We have a small tool that can help spot common formatting
 problems. It's run on all :ref:`pull requests<pull requests>`,
 so it's a good idea to run it on your changes. From a clone of the
 Xapian source tree, the following will tell you if there are any
-problems in the changes you've made since you branched from master:
+problems in the changes you've made since you branched from `main`:
 
 .. code-block:: bash
 
-   git diff master..HEAD | xapian-maintainer-tools/xapian-check-patch
+   git diff main..HEAD | xapian-maintainer-tools/xapian-check-patch
 
 Updated documentation
 ~~~~~~~~~~~~~~~~~~~~~

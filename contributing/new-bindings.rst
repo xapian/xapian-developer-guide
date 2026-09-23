@@ -9,7 +9,7 @@ this means more than just having bindings code. To truly support a language,
 we need to have:
 
 * working bindings that can be built against a recent release of Xapian or git
-  master, as well as against the latest version of the target language
+  main, as well as against the latest version of the target language
 
 * documentation to help people familiar with the target language to start using
   the bindings

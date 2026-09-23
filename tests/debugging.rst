@@ -157,7 +157,7 @@ You ideally want lcov 1.11 or later, since 1.11 includes patches to reduce
 memory usage significantly - lcov 1.10 would run out of memory in a 1GB VM.
 
 See `lcov.xapian.org <http://lcov.xapian.org/>`_ for automatically generated
-reports for git master.
+reports for git main.
 
 If you use ccache, you'll need ccache >= 3.2.2 for coverage builds to actually
 be cached.  Since ccache 3.0 (released 2010-06-20) coverage builds are

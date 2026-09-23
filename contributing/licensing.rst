@@ -43,4 +43,4 @@ under the GPL, but we are working towards being able to distribute Xapian under
 a more permissive license, and are not willing to accept patches which we will
 have to rewrite before this can happen.
 
-.. _COPYING: https://github.com/xapian/xapian/blob/master/xapian-core/COPYING
+.. _COPYING: https://github.com/xapian/xapian/blob/main/xapian-core/COPYING

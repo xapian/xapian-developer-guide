@@ -44,8 +44,8 @@ repository. Generally you can this as follows:
 
   .. code-block:: bash
 
-     $ git checkout master
-     $ git pull origin/master
+     $ git checkout main
+     $ git pull origin/main
 
 You can check create your new branch:
 
@@ -204,7 +204,7 @@ reasons.
 
 * In a similar vein, some changes that aren't pulled into a release series may
   be of interest to someone else who doesn't want to, or cannot, use the
-  "bleeding edge" git master. With separate commits, they can use the patches
+  "bleeding edge" git main. With separate commits, they can use the patches
   for just the functionality they are looking for. This can be particularly
   useful for people packaging Xapian for various operating system distributions.
 
